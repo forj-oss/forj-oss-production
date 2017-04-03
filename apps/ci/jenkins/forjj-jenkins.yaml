@@ -1,0 +1,27 @@
+forjj:
+  instancename: jenkins
+  organizationname: forj-oss
+deploy:
+  deployments:
+    docker:
+      deployto: docker
+      name: docker
+      serviceaddr: localhost
+      serviceport: "8080"
+  deployto: docker
+  command: bin/build.sh && bin/start.sh
+features:
+- feature:proxy
+- feature:seed-job
+- feature:basic-security
+- feature:tcp-slave-agent-port
+- feature:yet-another-docker-plugin
+dockerfile:
+  fromimage: forjdevops/jenkins-dood
+  fromimageversion: ""
+  maintainer: ""
+jenkinsimage:
+  name: jenkins
+  registryreponame: forj-oss
+  registryserver: hub.docker.com
+  version: ""

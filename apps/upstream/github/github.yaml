@@ -1,0 +1,67 @@
+urls:
+  github-base-url: https://api.github.com/
+repos:
+  forj-oss-infra:
+    name: forj-oss-infra
+    flow: ""
+    description: ""
+    users: {}
+    groups: {}
+  forjj:
+    name: forjj
+    flow: ""
+    description: ""
+    users: {}
+    groups: {}
+  forjj-contribs:
+    name: forjj-contribs
+    flow: ""
+    description: ""
+    users: {}
+    groups: {}
+  forjj-example:
+    name: forjj-example
+    flow: ""
+    description: Forjj blueprint examples
+    users: {}
+    groups: {}
+  forjj-flows:
+    name: forjj-flows
+    flow: ""
+    description: ""
+    users: {}
+    groups: {}
+  forjj-modules:
+    name: forjj-modules
+    flow: ""
+    description: ""
+    users: {}
+    groups: {}
+  forjj-repotemplates:
+    name: forjj-repotemplates
+    flow: ""
+    description: ""
+    users: {}
+    groups: {}
+  goforjj:
+    name: goforjj
+    flow: ""
+    description: ""
+    users: {}
+    groups: {}
+  jenkins-ci:
+    name: jenkins-ci
+    flow: ""
+    description: ""
+    users: {}
+    groups: {}
+  jenkins-install-inits:
+    name: jenkins-install-inits
+    flow: ""
+    description: ""
+    users: {}
+    groups: {}
+organization: forj-oss
+orgdisplayname: ""
+users: {}
+groups: {}
