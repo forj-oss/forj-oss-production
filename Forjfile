@@ -1,0 +1,92 @@
+forj-settings:
+  organization: forj-oss
+  default:
+    upstream-instance: github
+    flow: ""
+infra:
+  upstream-app: github
+  git-remote: ""
+  title: ""
+  flow: ""
+  repo-template: ""
+repositories:
+  forjj:
+    upstream-app: ""
+    git-remote: ""
+    title: ""
+    flow: ""
+    repo-template: ""
+    upstream: https://github.com/forj-oss/forjj
+  forjj-contribs:
+    upstream-app: ""
+    git-remote: ""
+    title: ""
+    flow: ""
+    repo-template: ""
+    upstream: https://github.com/forj-oss/forjj-contribs
+  forjj-example:
+    upstream-app: ""
+    git-remote: ""
+    title: Forjj blueprint examples
+    flow: ""
+    repo-template: ""
+  forjj-flows:
+    upstream-app: ""
+    git-remote: ""
+    title: ""
+    flow: ""
+    repo-template: ""
+    upstream: https://github.com/forj-oss/forjj-flows
+  forjj-modules:
+    upstream-app: ""
+    git-remote: ""
+    title: ""
+    flow: ""
+    repo-template: ""
+    upstream: https://github.com/forj-oss/forjj-modules
+  forjj-repotemplates:
+    upstream-app: ""
+    git-remote: ""
+    title: ""
+    flow: ""
+    repo-template: ""
+    upstream: https://github.com/forj-oss/forjj-repotemplates
+  goforjj:
+    upstream-app: ""
+    git-remote: ""
+    title: ""
+    flow: ""
+    repo-template: ""
+    upstream: https://github.com/forj-oss/goforjj
+  jenkins-ci:
+    upstream-app: ""
+    git-remote: ""
+    title: ""
+    flow: ""
+    repo-template: ""
+    upstream: https://github.com/forj-oss/jenkins-ci
+  jenkins-install-inits:
+    upstream-app: ""
+    git-remote: ""
+    title: ""
+    flow: ""
+    repo-template: ""
+    upstream: https://github.com/forj-oss/jenkins-install-inits
+applications:
+  github:
+    type: upstream
+    driver: github
+  jenkins:
+    type: ci
+    driver: jenkins
+users:
+  clarsonneur:
+    role: owner
+  ojacques:
+    role: owner
+groups:
+  forj-core:
+    role: ""
+    members:
+    - clarsonneur
+    - ojacques
