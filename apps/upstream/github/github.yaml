@@ -7,60 +7,70 @@ repos:
     description: "Forj infrastructure project"
     users: {}
     groups: {}
+    issue_tracker: true
   forjj:
     name: forjj
     flow: ""
     description: "Build your DevOps environment in minutes - thanks to docker!"
     users: {}
     groups: {}
+    issue_tracker: true
   forjj-contribs:
     name: forjj-contribs
     flow: ""
     description: "Forjj drivers defining core tasks to real application."
     users: {}
     groups: {}
+    issue_tracker: true
   forjj-example:
     name: forjj-example
     flow: ""
     description: Forjj blueprint examples
     users: {}
     groups: {}
+    issue_tracker: false
   forjj-flows:
     name: forjj-flows
     flow: ""
     description: "Global Forjj flows definition"
     users: {}
     groups: {}
+    issue_tracker: false
   forjj-modules:
     name: forjj-modules
     flow: ""
     description: "FORJJ Go module to manage forjj cli and data to send out to FORJJ plugins"
     users: {}
     groups: {}
+    issue_tracker: true
   forjj-repotemplates:
     name: forjj-repotemplates
     flow: ""
     description: "Global shared Repository templates to build a predefined repo structure in minutes."
     users: {}
     groups: {}
+    issue_tracker: false
   goforjj:
     name: goforjj
     flow: ""
     description: "A go module to facilitate building a FORJJ plugin"
     users: {}
     groups: {}
+    issue_tracker: true
   jenkins-ci:
     name: jenkins-ci
     flow: ""
     description: "Jenkins docker image built for forjj"
     users: {}
     groups: {}
+    issue_tracker: true
   jenkins-install-inits:
     name: jenkins-install-inits
     flow: ""
     description: "Part of DevOps - Make your Jenkins as Code a Reality!!! Repository of Jenkins features(groovy/plugins/shell script) to install/maintain."
     users: {}
     groups: {}
+    issue_tracker: true
 organization: forj-oss
 orgdisplayname: ""
 users: {}

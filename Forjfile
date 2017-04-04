@@ -16,6 +16,7 @@ repositories:
     title: "Build your DevOps environment in minutes - thanks to docker!"
     flow: ""
     repo-template: ""
+    issue_tracker: true
     upstream: https://github.com/forj-oss/forjj
   forjj-contribs:
     upstream-app: ""
@@ -24,12 +25,14 @@ repositories:
     flow: ""
     repo-template: ""
     upstream: https://github.com/forj-oss/forjj-contribs
+    issue_tracker: true
   forjj-example:
     upstream-app: ""
     git-remote: ""
     title: Forjj blueprint examples
     flow: ""
     repo-template: ""
+    issue_tracker: true
   forjj-flows:
     upstream-app: ""
     git-remote: ""
@@ -37,6 +40,7 @@ repositories:
     flow: ""
     repo-template: ""
     upstream: https://github.com/forj-oss/forjj-flows
+    issue_tracker: true
   forjj-modules:
     upstream-app: ""
     git-remote: ""
@@ -44,6 +48,7 @@ repositories:
     flow: ""
     repo-template: ""
     upstream: https://github.com/forj-oss/forjj-modules
+    issue_tracker: true
   forjj-repotemplates:
     upstream-app: ""
     git-remote: ""
@@ -51,6 +56,7 @@ repositories:
     flow: ""
     repo-template: ""
     upstream: https://github.com/forj-oss/forjj-repotemplates
+    issue_tracker: true
   goforjj:
     upstream-app: ""
     git-remote: ""
@@ -58,6 +64,7 @@ repositories:
     flow: ""
     repo-template: ""
     upstream: https://github.com/forj-oss/goforjj
+    issue_tracker: true
   jenkins-ci:
     upstream-app: ""
     git-remote: ""
@@ -65,6 +72,7 @@ repositories:
     flow: ""
     repo-template: ""
     upstream: https://github.com/forj-oss/jenkins-ci
+    issue_tracker: true
   jenkins-install-inits:
     upstream-app: ""
     git-remote: ""
@@ -72,6 +80,7 @@ repositories:
     flow: ""
     repo-template: ""
     upstream: https://github.com/forj-oss/jenkins-install-inits
+    issue_tracker: true
 applications:
   github:
     type: upstream
