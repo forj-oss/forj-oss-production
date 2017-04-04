@@ -13,14 +13,14 @@ repositories:
   forjj:
     upstream-app: ""
     git-remote: ""
-    title: ""
+    title: "Build your DevOps environment in minutes - thanks to docker!"
     flow: ""
     repo-template: ""
     upstream: https://github.com/forj-oss/forjj
   forjj-contribs:
     upstream-app: ""
     git-remote: ""
-    title: ""
+    title: "Forjj drivers defining core tasks to real application."
     flow: ""
     repo-template: ""
     upstream: https://github.com/forj-oss/forjj-contribs
@@ -33,42 +33,42 @@ repositories:
   forjj-flows:
     upstream-app: ""
     git-remote: ""
-    title: ""
+    title: "Global Forjj flows definition"
     flow: ""
     repo-template: ""
     upstream: https://github.com/forj-oss/forjj-flows
   forjj-modules:
     upstream-app: ""
     git-remote: ""
-    title: ""
+    title: "FORJJ Go module to manage forjj cli and data to send out to FORJJ plugins"
     flow: ""
     repo-template: ""
     upstream: https://github.com/forj-oss/forjj-modules
   forjj-repotemplates:
     upstream-app: ""
     git-remote: ""
-    title: ""
+    title: "Global shared Repository templates to build a predefined repo structure in minutes."
     flow: ""
     repo-template: ""
     upstream: https://github.com/forj-oss/forjj-repotemplates
   goforjj:
     upstream-app: ""
     git-remote: ""
-    title: ""
+    title: "A go module to facilitate building a FORJJ plugin"
     flow: ""
     repo-template: ""
     upstream: https://github.com/forj-oss/goforjj
   jenkins-ci:
     upstream-app: ""
     git-remote: ""
-    title: ""
+    title: "Jenkins docker image built for forjj"
     flow: ""
     repo-template: ""
     upstream: https://github.com/forj-oss/jenkins-ci
   jenkins-install-inits:
     upstream-app: ""
     git-remote: ""
-    title: ""
+    title: "Part of DevOps - Make your Jenkins as Code a Reality!!! Repository of Jenkins features(groovy/plugins/shell script) to install/maintain."
     flow: ""
     repo-template: ""
     upstream: https://github.com/forj-oss/jenkins-install-inits
