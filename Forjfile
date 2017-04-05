@@ -94,7 +94,7 @@ users:
   ojacques:
     role: owner
 groups:
-  forj-core:
+  core:
     role: ""
     members:
     - clarsonneur

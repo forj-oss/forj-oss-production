@@ -74,4 +74,7 @@ repos:
 organization: forj-oss
 orgdisplayname: ""
 users: {}
-groups: {}
+groups: 
+  core: 
+    role: none
+    users: "clarsonneur,ojacques"
