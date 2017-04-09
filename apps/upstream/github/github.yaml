@@ -77,7 +77,7 @@ users: {}
 groups: 
   Core: 
     role: none
-    users: [ "clarsonneur", "ojacques", "wenlock", "homeless", "arneluehrs", "miqui" ]
+    users: [ "clarsonneur", "ojacques", "wenlock", "homeles", "arneluehrs", "miqui" ]
   Contributors:
     users: [ "vaceletm" ]
   gerrit:
