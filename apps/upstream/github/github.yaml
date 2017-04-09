@@ -75,6 +75,10 @@ organization: forj-oss
 orgdisplayname: ""
 users: {}
 groups: 
-  core: 
+  Core: 
     role: none
-    users: "clarsonneur,ojacques"
+    users: [ "clarsonneur", "ojacques", "wenlock", "homeless", "arneluehrs", "miqui" ]
+  Contributors:
+    users: [ "vaceletm" ]
+  gerrit:
+    users: [ "forj-publish" ]
