@@ -81,7 +81,7 @@ then
         # TODO: Find a way to stop it safely
         sudo docker rm -f jenkins-dood
     else
-        echo "Nothing to re/start. Jenkins is still accessible at http://$SERVICE_PORT:$SERVICE_PORT"
+        echo "Nothing to re/start. Jenkins is still accessible at http://$SERVICE_ADDR:$SERVICE_PORT"
         exit 0
     fi
 fi
