@@ -6,4 +6,5 @@ feature:basic-security
 feature:tcp-slave-agent-port
 feature:jenkins-pipeline
 plugin:git:3.4.1
+plugin:github-branch-source:2.2.1
 feature:yet-another-docker-plugin

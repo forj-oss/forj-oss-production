@@ -5,7 +5,9 @@ FROM forjdevops/jenkins-dood
 # COPY local_plugins/*  $JENKINS_DATA_REF/plugins/
 COPY features.lst /tmp
 
-ENV JENKINS_SLAVE_AGENT_PORT=50000
+ENV JENKINS_SLAVE_AGENT_PORT=50000 \
+    SEED_JOBS_REPO=https://github.com/forj-oss/forj-oss-infra \
+    BUILD_DSL_SCRIPTS=apps/ci/jenkins/jobs-dsl/*.groovy
 
 USER root
 

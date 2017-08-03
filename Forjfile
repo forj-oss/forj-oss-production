@@ -57,14 +57,13 @@ groups:
   gerrit:
     members: [ "forj-publish" ]
 projects:
-  forj-oss-infra:
-  jenkins-install-inits:
-  jenkins-ci:
-  goforjj:
-  forjj:
-  forjj-contribs:
-  forjj-examples:
-  forjj-flows:
-  forjj-modules:
-  forjj-repotemplates:
-
+  forj-oss-infra: {}
+  jenkins-install-inits: {}
+  jenkins-ci: {}
+  goforjj: {}
+  forjj: {}
+  forjj-contribs: {}
+  forjj-examples: {}
+  forjj-flows: {}
+  forjj-modules: {}
+  forjj-repotemplates: {}

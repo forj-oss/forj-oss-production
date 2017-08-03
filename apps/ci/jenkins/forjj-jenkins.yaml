@@ -1,7 +1,7 @@
 forjj:
   instancename: jenkins
   organizationname: forj-oss
-  infraupstream: ""
+  infraupstream: git@github.com:forj-oss/forj-oss-infra.git
 deploy:
   deployment:
     serviceaddr: jenkins-forjj.eastus.cloudapp.azure.com
@@ -15,6 +15,7 @@ features:
 - feature:tcp-slave-agent-port
 - feature:jenkins-pipeline
 - plugin:git:3.4.1
+- plugin:github-branch-source:2.2.1
 - feature:yet-another-docker-plugin
 dockerfile:
   fromimage: forjdevops/jenkins-dood
@@ -25,4 +26,74 @@ jenkinsimage:
   registryreponame: forj-oss
   registryserver: hub.docker.com
   version: ""
-projects: null
+projects:
+  dslrepo: https://github.com/forj-oss/forj-oss-infra
+  dslpath: jobs-dsl
+  infrapath: apps/ci/jenkins
+  list:
+    forj-oss-infra:
+      name: forj-oss-infra
+      sourcetype: github
+      github:
+        apiurl: ""
+        repo: forj-oss-infra
+        repoowner: forj-oss
+    forjj:
+      name: forjj
+      sourcetype: github
+      github:
+        apiurl: ""
+        repo: forjj
+        repoowner: forj-oss
+    forjj-contribs:
+      name: forjj-contribs
+      sourcetype: github
+      github:
+        apiurl: ""
+        repo: forjj-contribs
+        repoowner: forj-oss
+    forjj-examples:
+      name: forjj-examples
+      sourcetype: git
+    forjj-flows:
+      name: forjj-flows
+      sourcetype: github
+      github:
+        apiurl: ""
+        repo: forjj-flows
+        repoowner: forj-oss
+    forjj-modules:
+      name: forjj-modules
+      sourcetype: github
+      github:
+        apiurl: ""
+        repo: forjj-modules
+        repoowner: forj-oss
+    forjj-repotemplates:
+      name: forjj-repotemplates
+      sourcetype: github
+      github:
+        apiurl: ""
+        repo: forjj-repotemplates
+        repoowner: forj-oss
+    goforjj:
+      name: goforjj
+      sourcetype: github
+      github:
+        apiurl: ""
+        repo: goforjj
+        repoowner: forj-oss
+    jenkins-ci:
+      name: jenkins-ci
+      sourcetype: github
+      github:
+        apiurl: ""
+        repo: jenkins-ci
+        repoowner: forj-oss
+    jenkins-install-inits:
+      name: jenkins-install-inits
+      sourcetype: github
+      github:
+        apiurl: ""
+        repo: jenkins-install-inits
+        repoowner: forj-oss
