@@ -2,84 +2,39 @@ forj-settings:
   organization: forj-oss
   default:
     upstream-instance: github
-    flow: ""
+    flow: pull_request
 infra:
   upstream-app: github
-  git-remote: ""
-  title: ""
-  flow: ""
-  repo-template: ""
+  title: "Forj DevOps infrastructure repository"
 repositories:
   forjj:
-    upstream-app: ""
-    git-remote: ""
     title: "Build your DevOps environment in minutes - thanks to docker!"
-    flow: ""
-    repo-template: ""
     issue_tracker: true
-    upstream: https://github.com/forj-oss/forjj
   forjj-contribs:
-    upstream-app: ""
-    git-remote: ""
     title: "Forjj drivers defining core tasks to real application."
-    flow: ""
-    repo-template: ""
     upstream: https://github.com/forj-oss/forjj-contribs
     issue_tracker: true
   forjj-example:
-    upstream-app: ""
-    git-remote: ""
     title: Forjj blueprint examples
-    flow: ""
-    repo-template: ""
     issue_tracker: true
   forjj-flows:
-    upstream-app: ""
-    git-remote: ""
     title: "Global Forjj flows definition"
-    flow: ""
-    repo-template: ""
-    upstream: https://github.com/forj-oss/forjj-flows
     issue_tracker: true
   forjj-modules:
-    upstream-app: ""
-    git-remote: ""
     title: "FORJJ Go module to manage forjj cli and data to send out to FORJJ plugins"
-    flow: ""
-    repo-template: ""
-    upstream: https://github.com/forj-oss/forjj-modules
     issue_tracker: true
   forjj-repotemplates:
-    upstream-app: ""
-    git-remote: ""
     title: "Global shared Repository templates to build a predefined repo structure in minutes."
-    flow: ""
-    repo-template: ""
-    upstream: https://github.com/forj-oss/forjj-repotemplates
     issue_tracker: true
   goforjj:
-    upstream-app: ""
-    git-remote: ""
     title: "A go module to facilitate building a FORJJ plugin"
-    flow: ""
-    repo-template: ""
     upstream: https://github.com/forj-oss/goforjj
     issue_tracker: true
   jenkins-ci:
-    upstream-app: ""
-    git-remote: ""
     title: "Jenkins docker image built for forjj"
-    flow: ""
-    repo-template: ""
-    upstream: https://github.com/forj-oss/jenkins-ci
     issue_tracker: true
   jenkins-install-inits:
-    upstream-app: ""
-    git-remote: ""
     title: "Part of DevOps - Make your Jenkins as Code a Reality!!! Repository of Jenkins features(groovy/plugins/shell script) to install/maintain."
-    flow: ""
-    repo-template: ""
-    upstream: https://github.com/forj-oss/jenkins-install-inits
     issue_tracker: true
 applications:
   github:
@@ -88,14 +43,28 @@ applications:
   jenkins:
     type: ci
     driver: jenkins
+    deploy-service-addr: "jenkins-forjj.eastus.cloudapp.azure.com"
 users:
   clarsonneur:
     role: owner
   ojacques:
     role: owner
 groups:
-  core:
-    role: ""
-    members:
-    - clarsonneur
-    - ojacques
+  Core:
+    members: [ "clarsonneur", "ojacques", "wenlock", "homeles", "arneluehrs", "miqui" ]
+  Contributors:
+    members: [ "vaceletm" ]
+  gerrit:
+    members: [ "forj-publish" ]
+projects:
+  forj-oss-infra:
+  jenkins-install-inits:
+  jenkins-ci:
+  goforjj:
+  forjj:
+  forjj-contribs:
+  forjj-examples:
+  forjj-flows:
+  forjj-modules:
+  forjj-repotemplates:
+

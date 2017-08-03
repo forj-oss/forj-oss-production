@@ -1,84 +1,90 @@
 urls:
-  github-base-url: https://api.github.com/
+  github-base-url: https://api.github.com
+  github-url: https://github.com
 repos:
   forj-oss-infra:
     name: forj-oss-infra
-    flow: ""
-    description: "Forj infrastructure project"
+    description: Forj DevOps infrastructure repository
+    issue_tracker: true
     users: {}
     groups: {}
-    issue_tracker: true
   forjj:
     name: forjj
-    flow: ""
-    description: "Build your DevOps environment in minutes - thanks to docker!"
+    description: Build your DevOps environment in minutes - thanks to docker!
+    issue_tracker: true
     users: {}
     groups: {}
-    issue_tracker: true
   forjj-contribs:
     name: forjj-contribs
-    flow: ""
-    description: "Forjj drivers defining core tasks to real application."
+    description: Forjj drivers defining core tasks to real application.
+    issue_tracker: true
     users: {}
     groups: {}
-    issue_tracker: true
   forjj-example:
     name: forjj-example
-    flow: ""
     description: Forjj blueprint examples
+    issue_tracker: true
     users: {}
     groups: {}
-    issue_tracker: false
   forjj-flows:
     name: forjj-flows
-    flow: ""
-    description: "Global Forjj flows definition"
+    description: Global Forjj flows definition
+    issue_tracker: true
     users: {}
     groups: {}
-    issue_tracker: false
   forjj-modules:
     name: forjj-modules
-    flow: ""
-    description: "FORJJ Go module to manage forjj cli and data to send out to FORJJ plugins"
+    description: FORJJ Go module to manage forjj cli and data to send out to FORJJ
+      plugins
+    issue_tracker: true
     users: {}
     groups: {}
-    issue_tracker: true
   forjj-repotemplates:
     name: forjj-repotemplates
-    flow: ""
-    description: "Global shared Repository templates to build a predefined repo structure in minutes."
+    description: Global shared Repository templates to build a predefined repo structure
+      in minutes.
+    issue_tracker: true
     users: {}
     groups: {}
-    issue_tracker: false
   goforjj:
     name: goforjj
-    flow: ""
-    description: "A go module to facilitate building a FORJJ plugin"
+    description: A go module to facilitate building a FORJJ plugin
+    issue_tracker: true
     users: {}
     groups: {}
-    issue_tracker: true
   jenkins-ci:
     name: jenkins-ci
-    flow: ""
-    description: "Jenkins docker image built for forjj"
+    description: Jenkins docker image built for forjj
+    issue_tracker: true
     users: {}
     groups: {}
-    issue_tracker: true
   jenkins-install-inits:
     name: jenkins-install-inits
-    flow: ""
-    description: "Part of DevOps - Make your Jenkins as Code a Reality!!! Repository of Jenkins features(groovy/plugins/shell script) to install/maintain."
+    description: Part of DevOps - Make your Jenkins as Code a Reality!!! Repository
+      of Jenkins features(groovy/plugins/shell script) to install/maintain.
+    issue_tracker: true
     users: {}
     groups: {}
-    issue_tracker: true
 organization: forj-oss
 orgdisplayname: ""
-users: {}
-groups: 
-  Core: 
-    role: none
-    users: [ "clarsonneur", "ojacques", "wenlock", "homeles", "arneluehrs", "miqui" ]
+users:
+  clarsonneur: owner
+  ojacques: owner
+groups:
   Contributors:
-    users: [ "vaceletm" ]
+    role: ""
+    users:
+    - vaceletm
+  Core:
+    role: ""
+    users:
+    - clarsonneur
+    - ojacques
+    - wenlock
+    - homeles
+    - arneluehrs
+    - miqui
   gerrit:
-    users: [ "forj-publish" ]
+    role: ""
+    users:
+    - forj-publish

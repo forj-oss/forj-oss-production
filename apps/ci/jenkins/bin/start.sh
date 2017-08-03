@@ -60,7 +60,7 @@ fi
 if [ "$SERVICE_ADDR" = "" ]
 then
    echo "SERVICE_ADDR not defined by any deployment environment. Set 'localhost'"
-   SERVICE_ADDR="localhost"
+   SERVICE_ADDR="jenkins-forjj.eastus.cloudapp.azure.com"
 fi
 if [ "$SERVICE_PORT" = "" ]
 then

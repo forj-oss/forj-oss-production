@@ -4,5 +4,6 @@ feature:proxy
 feature:seed-job
 feature:basic-security
 feature:tcp-slave-agent-port
+feature:jenkins-pipeline
+plugin:git:3.4.1
 feature:yet-another-docker-plugin
-plugin:git:3.0.0
