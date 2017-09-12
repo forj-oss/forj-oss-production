@@ -64,7 +64,7 @@ then
 fi
 if [ "$SERVICE_PORT" = "" ]
 then
-   SERVICE_PORT=8443 # Default SSL port
+   SERVICE_PORT=443
    echo "SERVICE_PORT not defined by any deployment environment. Set to '$SERVICE_PORT'"
 fi
 
@@ -105,4 +105,4 @@ then
     sudo docker logs jenkins-dood
     return 1
 fi
-echo "Jenkins has been started and should be accessible at http://$SERVICE_ADDR:$SERVICE_PORT"
+echo "Jenkins has been started and should be accessible at https://$SERVICE_ADDR:$SERVICE_PORT"

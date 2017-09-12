@@ -5,7 +5,7 @@ forjj:
 deploy:
   deployment:
     serviceaddr: jenkins-forjj.eastus.cloudapp.azure.com
-    serviceport: "8080"
+    serviceport: "443"
     to: docker
   ssl:
     cacertificate: ""

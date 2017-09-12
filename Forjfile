@@ -44,6 +44,7 @@ applications:
     type: ci
     driver: jenkins
     deploy-service-addr: "jenkins-forjj.eastus.cloudapp.azure.com"
+    deploy-service-port: 443
     ssl-certificate: |
       -----BEGIN CERTIFICATE-----
       MIID3DCCAsQCCQCgzOqfF2MlrDANBgkqhkiG9w0BAQUFADCBrzELMAkGA1UEBhMC
