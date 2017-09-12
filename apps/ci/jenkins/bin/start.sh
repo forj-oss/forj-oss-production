@@ -59,13 +59,13 @@ fi
 
 if [ "$SERVICE_ADDR" = "" ]
 then
-   echo "SERVICE_ADDR not defined by any deployment environment. Set 'localhost'"
+   echo "SERVICE_ADDR not defined by any deployment environment. Set to 'jenkins-forjj.eastus.cloudapp.azure.com'"
    SERVICE_ADDR="jenkins-forjj.eastus.cloudapp.azure.com"
 fi
 if [ "$SERVICE_PORT" = "" ]
 then
-   echo "SERVICE_PORT not defined by any deployment environment. Set '8080'"
-   SERVICE_PORT=8080
+   SERVICE_PORT=8443 # Default SSL port
+   echo "SERVICE_PORT not defined by any deployment environment. Set to '$SERVICE_PORT'"
 fi
 
 TAG_NAME=hub.docker.com/$LOGNAME/$IMAGE_NAME:$IMAGE_VERSION
@@ -86,7 +86,18 @@ then
     fi
 fi
 
-sudo docker run -d -p 8080:$SERVICE_PORT --name jenkins-dood $CREDS $PROXY $DOCKER_OPTS $TAG_NAME
+if [[ "$CERTIFICATE_KEY" = "" ]]
+then
+   echo "Unable to set jenkins certificate without his key. Aborted."
+   exit 1
+fi
+echo "$CERTIFICATE_KEY" > .certificate.key
+
+JENKINS_OPTS='JENKINS_OPTS=--httpPort=-1 --httpsPort=8443 --httpsCertificate=/tmp/certificate.crt --httpsPrivateKey=/tmp/certificate.key'
+JENKINS_MOUNT="-v ${SRC}certificate.crt:/tmp/certificate.crt -v ${SRC}.certificate.key:/tmp/certificate.key"
+
+sudo docker run -d -p 8443:$SERVICE_PORT -e "$JENKINS_OPTS" $JENKINS_MOUNT --name jenkins-dood $CREDS $PROXY $DOCKER_OPTS $TAG_NAME
+
 
 if [ $? -ne 0 ]
 then

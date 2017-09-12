@@ -11,6 +11,8 @@ ENV JENKINS_SLAVE_AGENT_PORT=50000 \
 
 USER root
 
+COPY *.crt /var/jenkins_home
+
 ARG JENKINS_INSTALL_INITS_URL=https://github.com/forj-oss/jenkins-install-inits/raw/master/
 
 RUN /usr/local/bin/jenkins-install.sh /tmp/features.lst

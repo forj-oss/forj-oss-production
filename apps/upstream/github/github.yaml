@@ -8,6 +8,7 @@ repos:
     issue_tracker: true
     users: {}
     groups: {}
+    infra: true
   forjj:
     name: forjj
     description: Build your DevOps environment in minutes - thanks to docker!
