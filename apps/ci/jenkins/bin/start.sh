@@ -1,4 +1,4 @@
-#!/bin/sh -x
+#!/bin/sh
 #
 #
 
@@ -86,17 +86,24 @@ then
     fi
 fi
 
+if [[ "$ADMIN_PWD" != "" ]]
+then
+   ADMIN="-e SIMPLE_ADMIN_PWD=$ADMIN_PWD"
+   echo "Admin password set."
+fi
+
 if [[ "$CERTIFICATE_KEY" = "" ]]
 then
    echo "Unable to set jenkins certificate without his key. Aborted."
    exit 1
 fi
 echo "$CERTIFICATE_KEY" > .certificate.key
+echo "Certificate set."
 
 JENKINS_OPTS='JENKINS_OPTS=--httpPort=-1 --httpsPort=8443 --httpsCertificate=/tmp/certificate.crt --httpsPrivateKey=/tmp/certificate.key'
 JENKINS_MOUNT="-v ${SRC}certificate.crt:/tmp/certificate.crt -v ${SRC}.certificate.key:/tmp/certificate.key"
 
-sudo docker run --restart always -d -p $SERVICE_PORT:8443 -e "$JENKINS_OPTS" $JENKINS_MOUNT --name jenkins-dood $CREDS $PROXY $DOCKER_OPTS $TAG_NAME
+sudo docker run --restart always -d -p $SERVICE_PORT:8443 -e "$JENKINS_OPTS" $JENKINS_MOUNT --name jenkins-dood $ADMIN $CREDS $PROXY $DOCKER_OPTS $TAG_NAME
 
 
 if [ $? -ne 0 ]
