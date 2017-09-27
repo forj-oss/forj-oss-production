@@ -60,21 +60,21 @@ projects:
       name: forj-oss-infra
       sourcetype: github
       github:
-        apiurl: ""
+        apiurl: https://api.github.com
         repo: forj-oss-infra
         repoowner: forj-oss
     forjj:
       name: forjj
       sourcetype: github
       github:
-        apiurl: ""
+        apiurl: https://api.github.com
         repo: forjj
         repoowner: forj-oss
     forjj-contribs:
       name: forjj-contribs
       sourcetype: github
       github:
-        apiurl: ""
+        apiurl: https://api.github.com
         repo: forjj-contribs
         repoowner: forj-oss
     forjj-examples:
@@ -84,41 +84,41 @@ projects:
       name: forjj-flows
       sourcetype: github
       github:
-        apiurl: ""
+        apiurl: https://api.github.com
         repo: forjj-flows
         repoowner: forj-oss
     forjj-modules:
       name: forjj-modules
       sourcetype: github
       github:
-        apiurl: ""
+        apiurl: https://api.github.com
         repo: forjj-modules
         repoowner: forj-oss
     forjj-repotemplates:
       name: forjj-repotemplates
       sourcetype: github
       github:
-        apiurl: ""
+        apiurl: https://api.github.com
         repo: forjj-repotemplates
         repoowner: forj-oss
     goforjj:
       name: goforjj
       sourcetype: github
       github:
-        apiurl: ""
+        apiurl: https://api.github.com
         repo: goforjj
         repoowner: forj-oss
     jenkins-ci:
       name: jenkins-ci
       sourcetype: github
       github:
-        apiurl: ""
+        apiurl: https://api.github.com
         repo: jenkins-ci
         repoowner: forj-oss
     jenkins-install-inits:
       name: jenkins-install-inits
       sourcetype: github
       github:
-        apiurl: ""
+        apiurl: https://api.github.com
         repo: jenkins-install-inits
         repoowner: forj-oss
