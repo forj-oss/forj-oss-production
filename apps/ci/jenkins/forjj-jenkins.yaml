@@ -40,7 +40,9 @@ features:
 - feature:tcp-slave-agent-port
 - feature:jenkins-pipeline
 - plugin:git:3.4.1
-- plugin:github-branch-source:2.2.1
+- plugin:managed-scripts
+- plugin:config-file-provider
+- feature:multibranch-github-pipeline
 - feature:yet-another-docker-plugin
 dockerfile:
   fromimage: forjdevops/jenkins-dood
@@ -122,3 +124,5 @@ projects:
         apiurl: https://api.github.com
         repo: jenkins-install-inits
         repoowner: forj-oss
+github-user:
+  name: clarsonneur

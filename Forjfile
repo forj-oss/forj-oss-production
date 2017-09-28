@@ -45,6 +45,7 @@ applications:
     driver: jenkins
     deploy-service-addr: "jenkins-forjj.eastus.cloudapp.azure.com"
     deploy-service-port: 443
+    github-user-username: clarsonneur
     ssl-certificate: |
       -----BEGIN CERTIFICATE-----
       MIID3DCCAsQCCQCgzOqfF2MlrDANBgkqhkiG9w0BAQUFADCBrzELMAkGA1UEBhMC
