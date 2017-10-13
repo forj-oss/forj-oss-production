@@ -3,7 +3,7 @@
 #
 
 REPO=$LOGNAME
-IMAGE_NAME="jenkins"
+IMAGE_NAME="forj-oss-jenkins"
 IMAGE_VERSION=test
 
 
@@ -55,19 +55,21 @@ fi
 
 TAG_NAME=hub.docker.com/$LOGNAME/$IMAGE_NAME:$IMAGE_VERSION
 
-CONTAINER_IMG="$(sudo docker ps -a -f name=jenkins-dood --format "{{ .Image }}")"
+CONTAINER_IMG="$(sudo docker ps -a -f name=forj-oss-jenkins-dood --format "{{ .Image }}")"
 
 IMAGE_ID="$(sudo docker images --format "{{ .ID }}" $IMAGE_NAME)"
 
 if [[ "$ADMIN_PWD" != "" ]]
 then
    ADMIN="-e SIMPLE_ADMIN_PWD=$ADMIN_PWD"
+   unset ADMIN_PWD
    echo "Admin password set."
 fi
 
 if [[ "$GITHUB_USER_PASS" != "" ]]
 then
    GITHUB_USER="-e GITHUB_PASS=$GITHUB_USER_PASS"
+   unset GITHUB_USER_PASS
    echo "Github user password set."
 fi
 
@@ -77,10 +79,12 @@ then
    exit 1
 fi
 echo "$CERTIFICATE_KEY" > .certificate.key
+unset CERTIFICATE_KEY
 echo "Certificate set."
 
 JENKINS_OPTS='JENKINS_OPTS=--httpPort=-1 --httpsPort=8443 --httpsCertificate=/tmp/certificate.crt --httpsPrivateKey=/tmp/certificate.key'
 JENKINS_MOUNT="-v ${SRC}certificate.crt:/tmp/certificate.crt -v ${SRC}.certificate.key:/tmp/certificate.key"
+JENKINS_MOUNT="$JENKINS_MOUNT -v forj-oss-jenkins-home:/var/jenkins_home"
 
 
 if [ "$CONTAINER_IMG" != "" ]
@@ -90,15 +94,15 @@ then
         # TODO: Find a way to stop it safely - Using safe shutdown?
         echo "#!/bin/sh
 sleep 30
-docker rm -f jenkins-dood
+docker rm -f forj-oss-jenkins-dood
 sleep 2
-docker run --restart always $DOCKER_DOOD -d -p $SERVICE_PORT:8443 -e \"$JENKINS_OPTS\" $JENKINS_MOUNT --name jenkins-dood $GITHUB_USER $ADMIN $CREDS $PROXY $DOCKER_OPTS $TAG_NAME
+docker run --restart always $DOCKER_DOOD -d -p $SERVICE_PORT:8443 -e \"$JENKINS_OPTS\" $JENKINS_MOUNT --name forj-oss-jenkins-dood $GITHUB_USER $ADMIN $CREDS $PROXY $DOCKER_OPTS $TAG_NAME
 echo 'Service is restarted'
 rm -f \$0" > do_restart.sh
         chmod +x do_restart.sh
 
         echo "The image has been updated. It will be restarted in about 30 seconds"
-        sudo docker run --rm -v $VOL_PWD/do_restart.sh:/tmp/do_restart.sh $DOCKER_DOOD alpine /tmp/do_restart
+        sudo docker run --rm -v $VOL_PWD/do_restart.sh:/tmp/do_restart.sh $DOCKER_DOOD alpine /tmp/do_restart.sh
     else
         echo "Nothing to re/start. Jenkins is still accessible at http://$SERVICE_ADDR:$SERVICE_PORT"
     fi
@@ -106,12 +110,12 @@ rm -f \$0" > do_restart.sh
 fi
 
 # No container found. Start it.
-sudo docker run --restart always $DOCKER_DOOD -d -p $SERVICE_PORT:8443 -e "$JENKINS_OPTS" $JENKINS_MOUNT --name jenkins-dood $GITHUB_USER $ADMIN $CREDS $PROXY $DOCKER_OPTS $TAG_NAME
+sudo docker run --restart always $DOCKER_DOOD -d -p $SERVICE_PORT:8443 -e "$JENKINS_OPTS" $JENKINS_MOUNT --name forj-oss-jenkins-dood $GITHUB_USER $ADMIN $CREDS $PROXY $DOCKER_OPTS $TAG_NAME
 
 if [ $? -ne 0 ]
 then
     echo "Issue about jenkins startup."
-    sudo docker logs jenkins-dood
+    sudo docker logs forj-oss-jenkins-dood
     return 1
 fi
 echo "Jenkins has been started and should be accessible at https://$SERVICE_ADDR:$SERVICE_PORT"
