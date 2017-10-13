@@ -49,7 +49,7 @@ dockerfile:
   fromimageversion: ""
   maintainer: ""
 jenkinsimage:
-  name: jenkins
+  name: forj-oss-jenkins
   registryreponame: forj-oss
   registryserver: hub.docker.com
   version: ""

@@ -2,7 +2,7 @@
 #
 #
 
-IMAGE_NAME=jenkins
+IMAGE_NAME=forj-oss-jenkins
 
 if [ "$LOGNAME" = jenkins ]
 then
