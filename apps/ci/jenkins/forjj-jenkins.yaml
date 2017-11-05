@@ -65,6 +65,7 @@ projects:
         apiurl: https://api.github.com/
         repo: forj-oss-infra
         repoowner: forj-oss
+      infrarepo: true
     forjj:
       name: forjj
       sourcetype: github
