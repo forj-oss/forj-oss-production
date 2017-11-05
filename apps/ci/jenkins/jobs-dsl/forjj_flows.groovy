@@ -1,3 +1,4 @@
+
 multibranchPipelineJob('forjj-flows') {
   description('Folder for Project forjj-flows generated and maintained by Forjj. To update it use forjj update')
   branchSources {
@@ -7,6 +8,7 @@ multibranchPipelineJob('forjj-flows') {
           repository('forjj-flows')
       }
   }
+
   orphanedItemStrategy {
       discardOldItems {
           numToKeep(20)

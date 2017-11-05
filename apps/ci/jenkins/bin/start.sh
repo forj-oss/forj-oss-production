@@ -44,8 +44,8 @@ fi
 
 if [ "$SERVICE_ADDR" = "" ]
 then
-   echo "SERVICE_ADDR not defined by any deployment environment. Set to 'jenkins-forjj.eastus.cloudapp.azure.com'"
    SERVICE_ADDR="jenkins-forjj.eastus.cloudapp.azure.com"
+   echo "SERVICE_ADDR not defined by any deployment environment. Set to '$SERVICE_ADDR'"
 fi
 if [ "$SERVICE_PORT" = "" ]
 then
