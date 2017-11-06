@@ -45,7 +45,7 @@ features:
 - feature:multibranch-github-pipeline
 - feature:yet-another-docker-plugin
 dockerfile:
-  fromimage: forjdevops/jenkins-dood
+  fromimage: forjdevops/jenkins
   fromimageversion: ""
   maintainer: ""
 jenkinsimage:

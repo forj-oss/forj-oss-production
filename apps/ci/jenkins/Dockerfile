@@ -1,6 +1,6 @@
 # This file is managed by Forjj jenkins plugin at Maintain phase. Do not update it manually!
 
-FROM forjdevops/jenkins-dood
+FROM forjdevops/jenkins
 
 # COPY local_plugins/*  $JENKINS_DATA_REF/plugins/
 COPY features.lst /tmp
