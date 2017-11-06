@@ -1,9 +1,14 @@
 # This file is managed by Forjj jenkins plugin at Maintain phase. Do not update it manually!
-
-FROM forjdevops/jenkins-dood
+FROM forjdevops/jenkins
 
 # COPY local_plugins/*  $JENKINS_DATA_REF/plugins/
 COPY features.lst /tmp
+
+ARG DOOD_DOCKER_GROUP
+
+COPY install_dood.sh /tmp
+
+RUN /tmp/install_dood.sh $DOOD_DOCKER_GROUP
 
 ENV JENKINS_SLAVE_AGENT_PORT=50000 \
     SEED_JOBS_REPO=https://github.com/forj-oss/forj-oss-infra \
