@@ -73,7 +73,7 @@ then
    echo "Github user password set."
 fi
 
-JENKINS_MOUNT="-v forj-oss-jenkins-home:/var/jenkins_home -e DOCKER_JENKINS_MOUNT='forj-oss-jenkins-home:/var/jenkins_home'"
+JENKINS_MOUNT="-v forj-oss-jenkins-home:/var/jenkins_home -e DOCKER_JENKINS_MOUNT=forj-oss-jenkins-home:/var/jenkins_home"
 
 if [[ "$CERTIFICATE_KEY" = "" ]]
 then
