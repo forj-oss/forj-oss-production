@@ -36,6 +36,9 @@ repositories:
   jenkins-install-inits:
     title: "Part of DevOps - Make your Jenkins as Code a Reality!!! Repository of Jenkins features(groovy/plugins/shell script) to install/maintain."
     issue_tracker: true
+  github-release:
+    title: Manage github release with a simple basic command line.
+    issue_tracker: true
 applications:
   github:
     type: upstream
@@ -93,3 +96,4 @@ projects:
   forjj-flows: {}
   forjj-modules: {}
   forjj-repotemplates: {}
+  github-release: {}

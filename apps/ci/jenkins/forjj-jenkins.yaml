@@ -104,6 +104,13 @@ projects:
         apiurl: https://api.github.com/
         repo: forjj-repotemplates
         repoowner: forj-oss
+    github-release:
+      name: github-release
+      sourcetype: github
+      github:
+        apiurl: https://api.github.com/
+        repo: github-release
+        repoowner: forj-oss
     goforjj:
       name: goforjj
       sourcetype: github
