@@ -47,6 +47,12 @@ repos:
     issue_tracker: true
     users: {}
     groups: {}
+  github-release:
+    name: github-release
+    description: Manage github release with a simple basic command line.
+    issue_tracker: true
+    users: {}
+    groups: {}
   goforjj:
     name: goforjj
     description: A go module to facilitate building a FORJJ plugin
