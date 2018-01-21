@@ -99,7 +99,7 @@ projects:
   github-release: {}
 webhooks:
   slack:
-    url: https://hooks.slack.com/services/{{ .secret.url }}
+    url: https://hooks.slack.com/services/{{ .Secret }}
     events: commit_comment,create,delete,deployment_status,fork,issue_comment,issues,pull_request,pull_request_review,pull_request_review_comment,push,release
     repos: forj-oss-infra,forjj,forjj_contribs,jenkins-install-inits,jenkins-ci,goforjj,forjj-modules,github-release
   jenkins:
