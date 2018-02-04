@@ -1,10 +1,6 @@
 forj-settings:
   organization: forj-oss
-  default:
-    upstream-instance: github
-    flow: pull_request
 infra:
-  upstream-app: github
   title: "Forj DevOps infrastructure repository"
 repositories:
   forjj:
@@ -85,25 +81,9 @@ groups:
     members: [ "vaceletm" ]
   gerrit:
     members: [ "forj-publish" ]
-projects:
-  forj-oss-infra: {}
-  jenkins-install-inits: {}
-  jenkins-ci: {}
-  goforjj: {}
-  forjj: {}
-  forjj-contribs: {}
-  forjj-examples: {}
-  forjj-flows: {}
-  forjj-modules: {}
-  forjj-repotemplates: {}
-  github-release: {}
 webhooks:
   slack:
     url: https://hooks.slack.com/services/{{ .Secret }}
     events: commit_comment,create,delete,deployment_status,fork,issue_comment,issues,pull_request,pull_request_review,pull_request_review_comment,push,release
     repos: forj-oss-infra,forjj,forjj_contribs,jenkins-install-inits,jenkins-ci,goforjj,forjj-modules,github-release
-  jenkins:
-    url: https://jenkins-forjj.eastus.cloudapp.azure.com/github-webhook/
-    events: pull_request,push
-    organization: true
 

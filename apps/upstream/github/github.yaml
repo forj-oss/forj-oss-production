@@ -8,8 +8,16 @@ repos:
     issue_tracker: true
     infra: true
     webhooks:
+      jenkins-github:
+        url: https://jenkins-forjj.eastus.cloudapp.azure.com:443/github-webhook/
+        events:
+        - pull_request
+        - push
+        enabled: "true"
+        sslcheck: true
+        contenttype: form
       slack:
-        url: https://hooks.slack.com/services/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
+        url: https://hooks.slack.com/services/
         events:
         - commit_comment
         - create
@@ -32,8 +40,16 @@ repos:
     description: Build your DevOps environment in minutes - thanks to docker!
     issue_tracker: true
     webhooks:
+      jenkins-github:
+        url: https://jenkins-forjj.eastus.cloudapp.azure.com:443/github-webhook/
+        events:
+        - pull_request
+        - push
+        enabled: "true"
+        sslcheck: true
+        contenttype: form
       slack:
-        url: https://hooks.slack.com/services/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
+        url: https://hooks.slack.com/services/
         events:
         - commit_comment
         - create
@@ -55,16 +71,43 @@ repos:
     name: forjj-contribs
     description: Forjj drivers defining core tasks to real application.
     issue_tracker: true
+    webhooks:
+      jenkins-github:
+        url: https://jenkins-forjj.eastus.cloudapp.azure.com:443/github-webhook/
+        events:
+        - pull_request
+        - push
+        enabled: "true"
+        sslcheck: true
+        contenttype: form
     webhookpolicy: sync
   forjj-example:
     name: forjj-example
     description: Forjj blueprint examples
     issue_tracker: true
+    webhooks:
+      jenkins-github:
+        url: https://jenkins-forjj.eastus.cloudapp.azure.com:443/github-webhook/
+        events:
+        - pull_request
+        - push
+        enabled: "true"
+        sslcheck: true
+        contenttype: form
     webhookpolicy: sync
   forjj-flows:
     name: forjj-flows
     description: Global Forjj flows definition
     issue_tracker: true
+    webhooks:
+      jenkins-github:
+        url: https://jenkins-forjj.eastus.cloudapp.azure.com:443/github-webhook/
+        events:
+        - pull_request
+        - push
+        enabled: "true"
+        sslcheck: true
+        contenttype: form
     webhookpolicy: sync
   forjj-modules:
     name: forjj-modules
@@ -72,8 +115,16 @@ repos:
       plugins
     issue_tracker: true
     webhooks:
+      jenkins-github:
+        url: https://jenkins-forjj.eastus.cloudapp.azure.com:443/github-webhook/
+        events:
+        - pull_request
+        - push
+        enabled: "true"
+        sslcheck: true
+        contenttype: form
       slack:
-        url: https://hooks.slack.com/services/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
+        url: https://hooks.slack.com/services/
         events:
         - commit_comment
         - create
@@ -96,14 +147,31 @@ repos:
     description: Global shared Repository templates to build a predefined repo structure
       in minutes.
     issue_tracker: true
+    webhooks:
+      jenkins-github:
+        url: https://jenkins-forjj.eastus.cloudapp.azure.com:443/github-webhook/
+        events:
+        - pull_request
+        - push
+        enabled: "true"
+        sslcheck: true
+        contenttype: form
     webhookpolicy: sync
   github-release:
     name: github-release
     description: Manage github release with a simple basic command line.
     issue_tracker: true
     webhooks:
+      jenkins-github:
+        url: https://jenkins-forjj.eastus.cloudapp.azure.com:443/github-webhook/
+        events:
+        - pull_request
+        - push
+        enabled: "true"
+        sslcheck: true
+        contenttype: form
       slack:
-        url: https://hooks.slack.com/services/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
+        url: https://hooks.slack.com/services/
         events:
         - commit_comment
         - create
@@ -126,8 +194,16 @@ repos:
     description: A go module to facilitate building a FORJJ plugin
     issue_tracker: true
     webhooks:
+      jenkins-github:
+        url: https://jenkins-forjj.eastus.cloudapp.azure.com:443/github-webhook/
+        events:
+        - pull_request
+        - push
+        enabled: "true"
+        sslcheck: true
+        contenttype: form
       slack:
-        url: https://hooks.slack.com/services/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
+        url: https://hooks.slack.com/services/
         events:
         - commit_comment
         - create
@@ -150,8 +226,16 @@ repos:
     description: Jenkins docker image built for forjj
     issue_tracker: true
     webhooks:
+      jenkins-github:
+        url: https://jenkins-forjj.eastus.cloudapp.azure.com:443/github-webhook/
+        events:
+        - pull_request
+        - push
+        enabled: "true"
+        sslcheck: true
+        contenttype: form
       slack:
-        url: https://hooks.slack.com/services/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
+        url: https://hooks.slack.com/services/
         events:
         - commit_comment
         - create
@@ -175,8 +259,16 @@ repos:
       of Jenkins features(groovy/plugins/shell script) to install/maintain.
     issue_tracker: true
     webhooks:
+      jenkins-github:
+        url: https://jenkins-forjj.eastus.cloudapp.azure.com:443/github-webhook/
+        events:
+        - pull_request
+        - push
+        enabled: "true"
+        sslcheck: true
+        contenttype: form
       slack:
-        url: https://hooks.slack.com/services/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
+        url: https://hooks.slack.com/services/
         events:
         - commit_comment
         - create
@@ -224,5 +316,13 @@ webhooks:
     - pull_request
     - push
     enabled: "true"
+    sslcheck: true
+    contenttype: ""
+  jenkins-github:
+    url: https://jenkins-forjj.eastus.cloudapp.azure.com:443/github-webhook/
+    events:
+    - pull_request
+    - push
+    enabled: ""
     sslcheck: true
     contenttype: ""

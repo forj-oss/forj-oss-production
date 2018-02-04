@@ -80,9 +80,13 @@ projects:
         apiurl: https://api.github.com/
         repo: forjj-contribs
         repoowner: forj-oss
-    forjj-examples:
-      name: forjj-examples
-      sourcetype: git
+    forjj-example:
+      name: forjj-example
+      sourcetype: github
+      github:
+        apiurl: https://api.github.com/
+        repo: forjj-example
+        repoowner: forj-oss
     forjj-flows:
       name: forjj-flows
       sourcetype: github
