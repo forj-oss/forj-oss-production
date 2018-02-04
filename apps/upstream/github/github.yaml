@@ -14,7 +14,7 @@ repos:
         - pull_request
         - push
         enabled: "true"
-        sslcheck: true
+        sslcheck: false
         contenttype: form
       slack:
         url: https://hooks.slack.com/services/
@@ -46,7 +46,7 @@ repos:
         - pull_request
         - push
         enabled: "true"
-        sslcheck: true
+        sslcheck: false
         contenttype: form
       slack:
         url: https://hooks.slack.com/services/
@@ -78,7 +78,7 @@ repos:
         - pull_request
         - push
         enabled: "true"
-        sslcheck: true
+        sslcheck: false
         contenttype: form
     webhookpolicy: sync
   forjj-example:
@@ -92,7 +92,7 @@ repos:
         - pull_request
         - push
         enabled: "true"
-        sslcheck: true
+        sslcheck: false
         contenttype: form
     webhookpolicy: sync
   forjj-flows:
@@ -106,7 +106,7 @@ repos:
         - pull_request
         - push
         enabled: "true"
-        sslcheck: true
+        sslcheck: false
         contenttype: form
     webhookpolicy: sync
   forjj-modules:
@@ -121,7 +121,7 @@ repos:
         - pull_request
         - push
         enabled: "true"
-        sslcheck: true
+        sslcheck: false
         contenttype: form
       slack:
         url: https://hooks.slack.com/services/
@@ -154,7 +154,7 @@ repos:
         - pull_request
         - push
         enabled: "true"
-        sslcheck: true
+        sslcheck: false
         contenttype: form
     webhookpolicy: sync
   github-release:
@@ -168,7 +168,7 @@ repos:
         - pull_request
         - push
         enabled: "true"
-        sslcheck: true
+        sslcheck: false
         contenttype: form
       slack:
         url: https://hooks.slack.com/services/
@@ -200,7 +200,7 @@ repos:
         - pull_request
         - push
         enabled: "true"
-        sslcheck: true
+        sslcheck: false
         contenttype: form
     webhookpolicy: sync
   goforjj:
@@ -214,7 +214,7 @@ repos:
         - pull_request
         - push
         enabled: "true"
-        sslcheck: true
+        sslcheck: false
         contenttype: form
       slack:
         url: https://hooks.slack.com/services/
@@ -246,7 +246,7 @@ repos:
         - pull_request
         - push
         enabled: "true"
-        sslcheck: true
+        sslcheck: false
         contenttype: form
       slack:
         url: https://hooks.slack.com/services/
@@ -279,7 +279,7 @@ repos:
         - pull_request
         - push
         enabled: "true"
-        sslcheck: true
+        sslcheck: false
         contenttype: form
       slack:
         url: https://hooks.slack.com/services/
