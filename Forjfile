@@ -35,6 +35,9 @@ repositories:
   github-release:
     title: Manage github release with a simple basic command line.
     issue_tracker: true
+  go-config-layers:
+    title: Provide an advanced configuration system, based on layers in GO.
+    issue_tracker: true
 applications:
   github:
     type: upstream
