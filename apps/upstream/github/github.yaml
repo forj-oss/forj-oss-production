@@ -189,6 +189,20 @@ repos:
         sslcheck: true
         contenttype: form
     webhookpolicy: sync
+  go-config-layers:
+    name: go-config-layers
+    description: Provide an advanced configuration system, based on layers in GO.
+    issue_tracker: true
+    webhooks:
+      jenkins-github:
+        url: https://jenkins-forjj.eastus.cloudapp.azure.com:443/github-webhook/
+        events:
+        - pull_request
+        - push
+        enabled: "true"
+        sslcheck: true
+        contenttype: form
+    webhookpolicy: sync
   goforjj:
     name: goforjj
     description: A go module to facilitate building a FORJJ plugin
