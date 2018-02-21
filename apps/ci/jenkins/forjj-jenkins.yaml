@@ -58,13 +58,6 @@ projects:
   dslpath: jobs-dsl
   infrapath: apps/ci/jenkins
   list:
-    dockercli:
-      name: dockercli
-      sourcetype: github
-      github:
-        apiurl: https://api.github.com/
-        repo: dockercli
-        repoowner: forj-oss
     forj-oss-infra:
       name: forj-oss-infra
       sourcetype: github
@@ -149,6 +142,13 @@ projects:
       github:
         apiurl: https://api.github.com/
         repo: jenkins-install-inits
+        repoowner: forj-oss
+    simple-docker-module:
+      name: simple-docker-module
+      sourcetype: github
+      github:
+        apiurl: https://api.github.com/
+        repo: simple-docker-module
         repoowner: forj-oss
 github-user:
   name: clarsonneur
