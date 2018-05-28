@@ -1,0 +1,18 @@
+applications:
+  github:
+    type: upstream
+    organization: forjj-test
+users:
+  clarsonneur:
+    role: owner
+  ojacques:
+    role: owner
+groups:
+  Core:
+    members: [ "clarsonneur", "ojacques" ]
+  Contributors:
+    members: [ "arneluehrs" ]
+repositories:
+  go-config-layers:
+    title: Provide an advanced configuration system, based on layers in GO.
+    issue_tracker: true
