@@ -13,6 +13,5 @@ groups:
   Contributors:
     members: [ "arneluehrs" ]
 repositories:
-  go-config-layers:
-    title: Provide an advanced configuration system, based on layers in GO.
-    issue_tracker: true
+  forjj-examples:
+    title: An example repository for DEV environment

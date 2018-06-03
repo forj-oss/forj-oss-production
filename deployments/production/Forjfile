@@ -45,7 +45,36 @@ webhooks:
   slack:
     url: https://hooks.slack.com/services/{{ .Secret }}
     events: commit_comment,create,delete,deployment_status,fork,issue_comment,issues,pull_request,pull_request_review,pull_request_review_comment,push,release
-    repos: forj-oss-infra,forjj,forjj_contribs,jenkins-install-inits,jenkins-ci,goforjj,forjj-modules,github-release
+    repos: forj-oss-infra,forjj,forjj-contribs,jenkins-install-inits,jenkins-ci,goforjj,forjj-modules,github-release,forjj-jenkins,forjj-github,jenkins-versions-tool,forjj-repotemplates,forjj-flows
   jenkins-github:
     ssl-check: false
+repositories:
+  forjj:
+    title: "Build your DevOps environment in minutes - thanks to docker!"
+  forjj-contribs:
+    title: "Forjj drivers defining core tasks to real application."
+  forjj-jenkins:
+    title: Forjj plugin to manage Jenkins application instanciation via docker
+  forjj-github:
+    title: Forjj plugin to manage github application through github API
+  forjj-example:
+    title: Forjj blueprint examples
+  forjj-flows:
+    title: "Global Forjj flows definition"
+  forjj-modules:
+    title: "FORJJ Go module to manage forjj cli and data to send out to FORJJ plugins"
+  forjj-repotemplates:
+    title: "Global shared Repository templates to build a predefined repo structure in minutes."
+  goforjj:
+    title: "A go module to facilitate building a FORJJ plugin"
+  jenkins-ci:
+    title: "Jenkins docker image built for forjj"
+  jenkins-install-inits:
+    title: "Part of DevOps - Make your Jenkins as Code a Reality!!! Repository of Jenkins features(groovy/plugins/shell script) to install/maintain."
+  github-release:
+    title: Manage github release with a simple basic command line.
+  simple-docker-module:
+    title: a simple basic GO wrapper to docker cli or docker moby/moby
+  jenkins-versions-tool:
+    title: Simple tool to manage list of plugins in docker images (jenkins master as container)
     
