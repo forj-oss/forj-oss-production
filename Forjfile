@@ -10,50 +10,6 @@ forj-settings:
 infra:
   title: "Forj DevOps infrastructure repository"
 repositories:
-  forjj:
-    title: "Build your DevOps environment in minutes - thanks to docker!"
-    issue_tracker: true
-  forjj-contribs:
-    title: "Forjj drivers defining core tasks to real application."
-    upstream: https://github.com/forj-oss/forjj-contribs
-    issue_tracker: true
-  forjj-jenkins:
-    title: Forjj plugin to manage Jenkins application instanciation via docker
-    issue_tracker: true
-  forjj-github:
-    title: Forjj plugin to manage github application through github API
-    issue_tracker: true
-  forjj-example:
-    title: Forjj blueprint examples
-    issue_tracker: true
-  forjj-flows:
-    title: "Global Forjj flows definition"
-    issue_tracker: true
-  forjj-modules:
-    title: "FORJJ Go module to manage forjj cli and data to send out to FORJJ plugins"
-    issue_tracker: true
-  forjj-repotemplates:
-    title: "Global shared Repository templates to build a predefined repo structure in minutes."
-    issue_tracker: true
-  goforjj:
-    title: "A go module to facilitate building a FORJJ plugin"
-    upstream: https://github.com/forj-oss/goforjj
-    issue_tracker: true
-  jenkins-ci:
-    title: "Jenkins docker image built for forjj"
-    issue_tracker: true
-  jenkins-install-inits:
-    title: "Part of DevOps - Make your Jenkins as Code a Reality!!! Repository of Jenkins features(groovy/plugins/shell script) to install/maintain."
-    issue_tracker: true
-  github-release:
-    title: Manage github release with a simple basic command line.
-    issue_tracker: true
-  go-config-layers:
-    title: Provide an advanced configuration system, based on layers in GO.
-    issue_tracker: true
-  simple-docker-module:
-    title: a simple basic GO wrapper to docker cli or docker moby/moby
-    issue_tracker: true  
   forj-oss-dev:
     title: Deployment source code for Dev environment
   forj-oss-production:
