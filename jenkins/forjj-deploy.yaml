@@ -1,0 +1,181 @@
+deploy:
+  deployment:
+    serviceaddr: jenkins-forjj.eastus.cloudapp.azure.com
+    serviceport: "443"
+    to: docker
+  name: production
+  type: PRO
+  ssl:
+    certificate: |
+      -----BEGIN CERTIFICATE-----
+      MIID3DCCAsQCCQCgzOqfF2MlrDANBgkqhkiG9w0BAQUFADCBrzELMAkGA1UEBhMC
+      RlIxDjAMBgNVBAgMBUlzZXJlMREwDwYDVQQHDAhHcmVub2JsZTEQMA4GA1UECgwH
+      Zm9yai5pbzEOMAwGA1UECwwFZm9yamoxMDAuBgNVBAMMJ2plbmtpbnMtZm9yamou
+      ZWFzdHVzLmNsb3VkYXBwLmF6dXJlLmNvbTEpMCcGCSqGSIb3DQEJARYaY2xhcnNv
+      bm5ldXIgYXQgZnJlZSBkb3QgZnIwHhcNMTcwOTEyMTkyNzQ3WhcNMTgwOTEyMTky
+      NzQ3WjCBrzELMAkGA1UEBhMCRlIxDjAMBgNVBAgMBUlzZXJlMREwDwYDVQQHDAhH
+      cmVub2JsZTEQMA4GA1UECgwHZm9yai5pbzEOMAwGA1UECwwFZm9yamoxMDAuBgNV
+      BAMMJ2plbmtpbnMtZm9yamouZWFzdHVzLmNsb3VkYXBwLmF6dXJlLmNvbTEpMCcG
+      CSqGSIb3DQEJARYaY2xhcnNvbm5ldXIgYXQgZnJlZSBkb3QgZnIwggEiMA0GCSqG
+      SIb3DQEBAQUAA4IBDwAwggEKAoIBAQDFToY5sMZVmdsLBC4drTJFDOXIGt3I3HI4
+      yyTng+AJy6Ig+JACq6wT9A1IPL/p3vjrfIwZxUeAUAlHA3Y3/0j9IM7Ebl4NIiOe
+      ekyg894Da5n89Fc77Y5x5Bltoo+SfWHqCqcQH08u7eY/nUccSGIpUDVvxkgUEXfB
+      R9C2nfiQHQ/DtfpX3UnbyFIadqBObFbg2OCCNLVK5hhRJniXktp7YKOcTKbk/d/m
+      is1NdbKHpu+dNYvPf8/7yxLQM06Vf/p2arF1lUmQq21DxnVEdVc5RWpbDNskUUZe
+      dIn30q2ifZuPIpd8i38fKvv0eQt9QZoeAQQj5wt7dcDD+7KEWPX5AgMBAAEwDQYJ
+      KoZIhvcNAQEFBQADggEBAHwC+tWCl2mKwRu+niOAOCk85DFLLbljRo5272fWRBdA
+      F9nQQ/0ONKIRws5IsRLpYMvICq2lgCYoMl3yGmi8hcdcLmECC5/knbst6lEZtNg+
+      1+x8AyPKuFOzWmCC2Npo2CrERS8xTGkBKHdHdISnpgIppCU4Kn6idYK59L5qBcNS
+      DPAztX42s03beEdL4h9/hpcw2nvpZefD9omDUyqW0nSW9PlL8FA0CjVd0+xgeVk3
+      dhbtDqqGGmGc3JVuPxo5rvoVHBz9Dvk5zWbpOAcn+cpf4l9yZf0HO68WzNJt3/Z6
+      S7UdKivzb8q4w7CikG5MsdAAsS56gM43IfdTI5m59rM=
+      -----END CERTIFICATE-----
+    method: manual
+features:
+- feature:jenkins-init
+- feature:proxy
+- feature:seed-job
+- feature:basic-security
+- feature:tcp-slave-agent-port
+- feature:jenkins-pipeline
+- plugin:managed-scripts
+- plugin:embeddable-build-status
+- feature:credentials
+- feature:csrf
+- plugin:config-file-provider
+- feature:multibranch-github-pipeline
+- plugin:timestamper
+- plugin:mask-passwords
+- plugin:blueocean
+- plugin:blueocean-github-pipeline
+- plugin:ws-cleanup
+- feature:yet-another-docker-plugin
+dockerfile:
+  fromimage: forjdevops/jenkins
+  fromimageversion: ""
+  maintainer: ""
+jenkinsimage:
+  name: forj-oss-jenkins
+  registryreponame: forj-oss
+  registryserver: hub.docker.com
+  version: ""
+projects:
+  dsl-repo: https://github.com/forj-oss/forj-oss-production
+  dsl-path: jenkins/jobs-dsl
+  dsl-default: true
+  list:
+    forj-oss-infra:
+      name: forj-oss-infra
+      sourcetype: github
+      github:
+        apiurl: https://api.github.com/
+        repo: forj-oss-infra
+        repoowner: forj-oss
+    forj-oss-production:
+      name: forj-oss-production
+      sourcetype: github
+      github:
+        apiurl: https://api.github.com/
+        repo: forj-oss-production
+        repoowner: forj-oss
+    forjj:
+      name: forjj
+      sourcetype: github
+      github:
+        apiurl: https://api.github.com/
+        repo: forjj
+        repoowner: forj-oss
+    forjj-contribs:
+      name: forjj-contribs
+      sourcetype: github
+      github:
+        apiurl: https://api.github.com/
+        repo: forjj-contribs
+        repoowner: forj-oss
+    forjj-example:
+      name: forjj-example
+      sourcetype: github
+      github:
+        apiurl: https://api.github.com/
+        repo: forjj-example
+        repoowner: forj-oss
+    forjj-flows:
+      name: forjj-flows
+      sourcetype: github
+      github:
+        apiurl: https://api.github.com/
+        repo: forjj-flows
+        repoowner: forj-oss
+    forjj-github:
+      name: forjj-github
+      sourcetype: github
+      github:
+        apiurl: https://api.github.com/
+        repo: forjj-github
+        repoowner: forj-oss
+    forjj-jenkins:
+      name: forjj-jenkins
+      sourcetype: github
+      github:
+        apiurl: https://api.github.com/
+        repo: forjj-jenkins
+        repoowner: forj-oss
+    forjj-modules:
+      name: forjj-modules
+      sourcetype: github
+      github:
+        apiurl: https://api.github.com/
+        repo: forjj-modules
+        repoowner: forj-oss
+    forjj-repotemplates:
+      name: forjj-repotemplates
+      sourcetype: github
+      github:
+        apiurl: https://api.github.com/
+        repo: forjj-repotemplates
+        repoowner: forj-oss
+    github-release:
+      name: github-release
+      sourcetype: github
+      github:
+        apiurl: https://api.github.com/
+        repo: github-release
+        repoowner: forj-oss
+    goforjj:
+      name: goforjj
+      sourcetype: github
+      github:
+        apiurl: https://api.github.com/
+        repo: goforjj
+        repoowner: forj-oss
+    jenkins-ci:
+      name: jenkins-ci
+      sourcetype: github
+      github:
+        apiurl: https://api.github.com/
+        repo: jenkins-ci
+        repoowner: forj-oss
+    jenkins-install-inits:
+      name: jenkins-install-inits
+      sourcetype: github
+      github:
+        apiurl: https://api.github.com/
+        repo: jenkins-install-inits
+        repoowner: forj-oss
+    jenkins-versions-tool:
+      name: jenkins-versions-tool
+      sourcetype: github
+      github:
+        apiurl: https://api.github.com/
+        repo: jenkins-versions-tool
+        repoowner: forj-oss
+    simple-docker-module:
+      name: simple-docker-module
+      sourcetype: github
+      github:
+        apiurl: https://api.github.com/
+        repo: simple-docker-module
+        repoowner: forj-oss
+github-user:
+  name: clarsonneur
+appextent: {}
