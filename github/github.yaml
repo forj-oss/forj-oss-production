@@ -91,6 +91,23 @@ repos:
     role: code
     owner: forj-oss
     isdeployable: true
+  forjj-bitbucket:
+    name: forjj-bitbucket
+    description: Forjj plugin to manage bitbucket application through bitbucket API
+    issue_tracker: true
+    webhooks:
+      jenkins-github:
+        url: https://jenkins-forjj.eastus.cloudapp.azure.com/github-webhook/
+        events:
+        - pull_request
+        - push
+        enabled: "true"
+        sslcheck: false
+        contenttype: form
+    webhookpolicy: sync
+    role: code
+    owner: forj-oss
+    isdeployable: true
   forjj-contribs:
     name: forjj-contribs
     description: Forjj drivers defining core tasks to real application.
@@ -208,6 +225,23 @@ repos:
         - release
         enabled: "true"
         sslcheck: true
+        contenttype: form
+    webhookpolicy: sync
+    role: code
+    owner: forj-oss
+    isdeployable: true
+  forjj-gitlab:
+    name: forjj-gitlab
+    description: Forjj plugin to manage gitlab application through gitlab API
+    issue_tracker: true
+    webhooks:
+      jenkins-github:
+        url: https://jenkins-forjj.eastus.cloudapp.azure.com/github-webhook/
+        events:
+        - pull_request
+        - push
+        enabled: "true"
+        sslcheck: false
         contenttype: form
     webhookpolicy: sync
     role: code
@@ -525,6 +559,8 @@ groups:
     role: ""
     users:
     - vaceletm
+    - uggla
+    - Xx-Parks-xX
   Core:
     role: ""
     users:
