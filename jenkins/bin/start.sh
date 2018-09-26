@@ -63,9 +63,9 @@ fi
 
 TAG_NAME=hub.docker.com/$REPO/$IMAGE_NAME:$IMAGE_VERSION
 
-CONTAINER_IMG="$(sudo docker ps -a -f name=forj-oss-jenkins-dood --format "{{ .Image }}")"
+CONTAINER_IMG="$(docker ps -a -f name=forj-oss-jenkins-dood --format "{{ .Image }}")"
 
-IMAGE_ID="$(sudo docker images --format "{{ .ID }}" $IMAGE_NAME)"
+IMAGE_ID="$(docker images --format "{{ .ID }}" $IMAGE_NAME)"
 
 if [[ "$SIMPLE_ADMIN_PWD" != "" ]]
 then
@@ -104,8 +104,8 @@ then
     then
         # TODO: Find a way to stop it safely - Using safe shutdown?
 
-        sudo docker rm -f jenkins-restart
-        sudo docker run -id --name jenkins-restart $DOCKER_DOOD $GITHUB_USER $ADMIN alpine /bin/cat
+        docker rm -f jenkins-restart
+        docker run -id --name jenkins-restart $DOCKER_DOOD $GITHUB_USER $ADMIN alpine /bin/cat
         echo "#!/bin/sh
 sleep 30
 docker rm -f forj-oss-jenkins-dood
@@ -114,13 +114,13 @@ docker run --restart always $DOCKER_DOOD -d -p $SERVICE_PORT:8443 -e \"$JENKINS_
 echo 'Service is restarted'
 sleep 1
 docker rm -f jenkins-restart" > do_restart.sh
-        sudo docker cp do_restart.sh jenkins-restart:/tmp/do_restart.sh
+        docker cp do_restart.sh jenkins-restart:/tmp/do_restart.sh
         rm -f do_restart.sh
-        sudo docker exec jenkins-restart chmod +x /tmp/do_restart.sh
+        docker exec jenkins-restart chmod +x /tmp/do_restart.sh
 
         echo "The image has been updated. It will be restarted in about 30 seconds"
         set -x
-        sudo -E docker exec jenkins-restart /tmp/do_restart.sh
+        docker exec jenkins-restart /tmp/do_restart.sh
         set +x
     else
         echo "Nothing to re/start. Jenkins is still accessible at http://$SERVICE_ADDR:$SERVICE_PORT"
@@ -129,12 +129,12 @@ docker rm -f jenkins-restart" > do_restart.sh
 fi
 
 # No container found. Start it.
-sudo -E docker run --restart always $DOCKER_DOOD -d -p $SERVICE_PORT:8443 -e "$JENKINS_OPTS" $JENKINS_MOUNT --name forj-oss-jenkins-dood $GITHUB_USER $ADMIN $PROXY $TAG_NAME
+docker run --restart always $DOCKER_DOOD -d -p $SERVICE_PORT:8443 -e "$JENKINS_OPTS" $JENKINS_MOUNT --name forj-oss-jenkins-dood $GITHUB_USER $ADMIN $PROXY $TAG_NAME
 
 if [ $? -ne 0 ]
 then
     echo "Issue about jenkins startup."
-    sudo docker logs forj-oss-jenkins-dood
+    docker logs forj-oss-jenkins-dood
     exit 1
 fi
 echo "Jenkins has been started and should be accessible at https://$SERVICE_ADDR:$SERVICE_PORT"
