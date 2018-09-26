@@ -64,6 +64,14 @@ projects:
   dsl-path: jenkins/jobs-dsl
   dsl-default: true
   list:
+    docker-lu:
+      name: docker-lu
+      sourcetype: github
+      github:
+        apiurl: https://api.github.com/
+        repo: docker-lu
+        repoowner: forj-oss
+      role: code
     forj-oss-infra:
       name: forj-oss-infra
       sourcetype: github

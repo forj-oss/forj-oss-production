@@ -3,6 +3,24 @@ urls:
   github-ssh: 'git@github.com:'
   github-url: https://github.com
 repos:
+  docker-lu:
+    name: docker-lu
+    description: docker-lu is a small GO program to adapt container files, /etc/passwd
+      & /etc/group, with docker host local user UID & GID.
+    issue_tracker: true
+    webhooks:
+      jenkins-github:
+        url: https://jenkins-forjj.eastus.cloudapp.azure.com/github-webhook/
+        events:
+        - pull_request
+        - push
+        enabled: "true"
+        sslcheck: false
+        contenttype: form
+    webhookpolicy: sync
+    role: code
+    owner: forj-oss
+    isdeployable: true
   forj-oss-infra:
     name: forj-oss-infra
     description: Forj DevOps infrastructure repository
