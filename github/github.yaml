@@ -10,7 +10,7 @@ repos:
     issue_tracker: true
     webhooks:
       jenkins-github:
-        url: https://jenkins-forjj.eastus.cloudapp.azure.com/github-webhook/
+        url: http://jenkins-forjj.famille-larsonneur.eu:8083/github-webhook/
         events:
         - pull_request
         - push
@@ -28,30 +28,12 @@ repos:
     infra: true
     webhooks:
       jenkins-github:
-        url: https://jenkins-forjj.eastus.cloudapp.azure.com/github-webhook/
+        url: http://jenkins-forjj.famille-larsonneur.eu:8083/github-webhook/
         events:
         - pull_request
         - push
         enabled: "true"
         sslcheck: false
-        contenttype: form
-      slack:
-        url: https://hooks.slack.com/services/${webhooks-slack-slack-id}
-        events:
-        - commit_comment
-        - create
-        - delete
-        - deployment_status
-        - fork
-        - issue_comment
-        - issues
-        - pull_request
-        - pull_request_review
-        - pull_request_review_comment
-        - push
-        - release
-        enabled: "true"
-        sslcheck: true
         contenttype: form
     webhookpolicy: sync
     role: infra
@@ -63,7 +45,7 @@ repos:
     issue_tracker: true
     webhooks:
       jenkins-github:
-        url: https://jenkins-forjj.eastus.cloudapp.azure.com/github-webhook/
+        url: http://jenkins-forjj.famille-larsonneur.eu:8083/github-webhook/
         events:
         - pull_request
         - push
@@ -80,30 +62,12 @@ repos:
     issue_tracker: true
     webhooks:
       jenkins-github:
-        url: https://jenkins-forjj.eastus.cloudapp.azure.com/github-webhook/
+        url: http://jenkins-forjj.famille-larsonneur.eu:8083/github-webhook/
         events:
         - pull_request
         - push
         enabled: "true"
         sslcheck: false
-        contenttype: form
-      slack:
-        url: https://hooks.slack.com/services/${webhooks-slack-slack-id}
-        events:
-        - commit_comment
-        - create
-        - delete
-        - deployment_status
-        - fork
-        - issue_comment
-        - issues
-        - pull_request
-        - pull_request_review
-        - pull_request_review_comment
-        - push
-        - release
-        enabled: "true"
-        sslcheck: true
         contenttype: form
     webhookpolicy: sync
     role: code
@@ -115,7 +79,7 @@ repos:
     issue_tracker: true
     webhooks:
       jenkins-github:
-        url: https://jenkins-forjj.eastus.cloudapp.azure.com/github-webhook/
+        url: http://jenkins-forjj.famille-larsonneur.eu:8083/github-webhook/
         events:
         - pull_request
         - push
@@ -132,30 +96,12 @@ repos:
     issue_tracker: true
     webhooks:
       jenkins-github:
-        url: https://jenkins-forjj.eastus.cloudapp.azure.com/github-webhook/
+        url: http://jenkins-forjj.famille-larsonneur.eu:8083/github-webhook/
         events:
         - pull_request
         - push
         enabled: "true"
         sslcheck: false
-        contenttype: form
-      slack:
-        url: https://hooks.slack.com/services/${webhooks-slack-slack-id}
-        events:
-        - commit_comment
-        - create
-        - delete
-        - deployment_status
-        - fork
-        - issue_comment
-        - issues
-        - pull_request
-        - pull_request_review
-        - pull_request_review_comment
-        - push
-        - release
-        enabled: "true"
-        sslcheck: true
         contenttype: form
     webhookpolicy: sync
     role: code
@@ -167,7 +113,7 @@ repos:
     issue_tracker: true
     webhooks:
       jenkins-github:
-        url: https://jenkins-forjj.eastus.cloudapp.azure.com/github-webhook/
+        url: http://jenkins-forjj.famille-larsonneur.eu:8083/github-webhook/
         events:
         - pull_request
         - push
@@ -184,30 +130,12 @@ repos:
     issue_tracker: true
     webhooks:
       jenkins-github:
-        url: https://jenkins-forjj.eastus.cloudapp.azure.com/github-webhook/
+        url: http://jenkins-forjj.famille-larsonneur.eu:8083/github-webhook/
         events:
         - pull_request
         - push
         enabled: "true"
         sslcheck: false
-        contenttype: form
-      slack:
-        url: https://hooks.slack.com/services/${webhooks-slack-slack-id}
-        events:
-        - commit_comment
-        - create
-        - delete
-        - deployment_status
-        - fork
-        - issue_comment
-        - issues
-        - pull_request
-        - pull_request_review
-        - pull_request_review_comment
-        - push
-        - release
-        enabled: "true"
-        sslcheck: true
         contenttype: form
     webhookpolicy: sync
     role: code
@@ -219,30 +147,12 @@ repos:
     issue_tracker: true
     webhooks:
       jenkins-github:
-        url: https://jenkins-forjj.eastus.cloudapp.azure.com/github-webhook/
+        url: http://jenkins-forjj.famille-larsonneur.eu:8083/github-webhook/
         events:
         - pull_request
         - push
         enabled: "true"
         sslcheck: false
-        contenttype: form
-      slack:
-        url: https://hooks.slack.com/services/${webhooks-slack-slack-id}
-        events:
-        - commit_comment
-        - create
-        - delete
-        - deployment_status
-        - fork
-        - issue_comment
-        - issues
-        - pull_request
-        - pull_request_review
-        - pull_request_review_comment
-        - push
-        - release
-        enabled: "true"
-        sslcheck: true
         contenttype: form
     webhookpolicy: sync
     role: code
@@ -254,7 +164,7 @@ repos:
     issue_tracker: true
     webhooks:
       jenkins-github:
-        url: https://jenkins-forjj.eastus.cloudapp.azure.com/github-webhook/
+        url: http://jenkins-forjj.famille-larsonneur.eu:8083/github-webhook/
         events:
         - pull_request
         - push
@@ -271,30 +181,12 @@ repos:
     issue_tracker: true
     webhooks:
       jenkins-github:
-        url: https://jenkins-forjj.eastus.cloudapp.azure.com/github-webhook/
+        url: http://jenkins-forjj.famille-larsonneur.eu:8083/github-webhook/
         events:
         - pull_request
         - push
         enabled: "true"
         sslcheck: false
-        contenttype: form
-      slack:
-        url: https://hooks.slack.com/services/${webhooks-slack-slack-id}
-        events:
-        - commit_comment
-        - create
-        - delete
-        - deployment_status
-        - fork
-        - issue_comment
-        - issues
-        - pull_request
-        - pull_request_review
-        - pull_request_review_comment
-        - push
-        - release
-        enabled: "true"
-        sslcheck: true
         contenttype: form
     webhookpolicy: sync
     role: code
@@ -307,30 +199,12 @@ repos:
     issue_tracker: true
     webhooks:
       jenkins-github:
-        url: https://jenkins-forjj.eastus.cloudapp.azure.com/github-webhook/
+        url: http://jenkins-forjj.famille-larsonneur.eu:8083/github-webhook/
         events:
         - pull_request
         - push
         enabled: "true"
         sslcheck: false
-        contenttype: form
-      slack:
-        url: https://hooks.slack.com/services/${webhooks-slack-slack-id}
-        events:
-        - commit_comment
-        - create
-        - delete
-        - deployment_status
-        - fork
-        - issue_comment
-        - issues
-        - pull_request
-        - pull_request_review
-        - pull_request_review_comment
-        - push
-        - release
-        enabled: "true"
-        sslcheck: true
         contenttype: form
     webhookpolicy: sync
     role: code
@@ -343,30 +217,12 @@ repos:
     issue_tracker: true
     webhooks:
       jenkins-github:
-        url: https://jenkins-forjj.eastus.cloudapp.azure.com/github-webhook/
+        url: http://jenkins-forjj.famille-larsonneur.eu:8083/github-webhook/
         events:
         - pull_request
         - push
         enabled: "true"
         sslcheck: false
-        contenttype: form
-      slack:
-        url: https://hooks.slack.com/services/${webhooks-slack-slack-id}
-        events:
-        - commit_comment
-        - create
-        - delete
-        - deployment_status
-        - fork
-        - issue_comment
-        - issues
-        - pull_request
-        - pull_request_review
-        - pull_request_review_comment
-        - push
-        - release
-        enabled: "true"
-        sslcheck: true
         contenttype: form
     webhookpolicy: sync
     role: code
@@ -378,30 +234,12 @@ repos:
     issue_tracker: true
     webhooks:
       jenkins-github:
-        url: https://jenkins-forjj.eastus.cloudapp.azure.com/github-webhook/
+        url: http://jenkins-forjj.famille-larsonneur.eu:8083/github-webhook/
         events:
         - pull_request
         - push
         enabled: "true"
         sslcheck: false
-        contenttype: form
-      slack:
-        url: https://hooks.slack.com/services/${webhooks-slack-slack-id}
-        events:
-        - commit_comment
-        - create
-        - delete
-        - deployment_status
-        - fork
-        - issue_comment
-        - issues
-        - pull_request
-        - pull_request_review
-        - pull_request_review_comment
-        - push
-        - release
-        enabled: "true"
-        sslcheck: true
         contenttype: form
     webhookpolicy: sync
     role: code
@@ -413,30 +251,12 @@ repos:
     issue_tracker: true
     webhooks:
       jenkins-github:
-        url: https://jenkins-forjj.eastus.cloudapp.azure.com/github-webhook/
+        url: http://jenkins-forjj.famille-larsonneur.eu:8083/github-webhook/
         events:
         - pull_request
         - push
         enabled: "true"
         sslcheck: false
-        contenttype: form
-      slack:
-        url: https://hooks.slack.com/services/${webhooks-slack-slack-id}
-        events:
-        - commit_comment
-        - create
-        - delete
-        - deployment_status
-        - fork
-        - issue_comment
-        - issues
-        - pull_request
-        - pull_request_review
-        - pull_request_review_comment
-        - push
-        - release
-        enabled: "true"
-        sslcheck: true
         contenttype: form
     webhookpolicy: sync
     role: code
@@ -448,30 +268,12 @@ repos:
     issue_tracker: true
     webhooks:
       jenkins-github:
-        url: https://jenkins-forjj.eastus.cloudapp.azure.com/github-webhook/
+        url: http://jenkins-forjj.famille-larsonneur.eu:8083/github-webhook/
         events:
         - pull_request
         - push
         enabled: "true"
         sslcheck: false
-        contenttype: form
-      slack:
-        url: https://hooks.slack.com/services/${webhooks-slack-slack-id}
-        events:
-        - commit_comment
-        - create
-        - delete
-        - deployment_status
-        - fork
-        - issue_comment
-        - issues
-        - pull_request
-        - pull_request_review
-        - pull_request_review_comment
-        - push
-        - release
-        enabled: "true"
-        sslcheck: true
         contenttype: form
     webhookpolicy: sync
     role: code
@@ -484,30 +286,12 @@ repos:
     issue_tracker: true
     webhooks:
       jenkins-github:
-        url: https://jenkins-forjj.eastus.cloudapp.azure.com/github-webhook/
+        url: http://jenkins-forjj.famille-larsonneur.eu:8083/github-webhook/
         events:
         - pull_request
         - push
         enabled: "true"
         sslcheck: false
-        contenttype: form
-      slack:
-        url: https://hooks.slack.com/services/${webhooks-slack-slack-id}
-        events:
-        - commit_comment
-        - create
-        - delete
-        - deployment_status
-        - fork
-        - issue_comment
-        - issues
-        - pull_request
-        - pull_request_review
-        - pull_request_review_comment
-        - push
-        - release
-        enabled: "true"
-        sslcheck: true
         contenttype: form
     webhookpolicy: sync
     role: code
@@ -520,30 +304,29 @@ repos:
     issue_tracker: true
     webhooks:
       jenkins-github:
-        url: https://jenkins-forjj.eastus.cloudapp.azure.com/github-webhook/
+        url: http://jenkins-forjj.famille-larsonneur.eu:8083/github-webhook/
         events:
         - pull_request
         - push
         enabled: "true"
         sslcheck: false
         contenttype: form
-      slack:
-        url: https://hooks.slack.com/services/${webhooks-slack-slack-id}
+    webhookpolicy: sync
+    role: code
+    owner: forj-oss
+    isdeployable: true
+  jplugins:
+    name: jplugins
+    description: Jenkins plugins managed from code
+    issue_tracker: true
+    webhooks:
+      jenkins-github:
+        url: http://jenkins-forjj.famille-larsonneur.eu:8083/github-webhook/
         events:
-        - commit_comment
-        - create
-        - delete
-        - deployment_status
-        - fork
-        - issue_comment
-        - issues
         - pull_request
-        - pull_request_review
-        - pull_request_review_comment
         - push
-        - release
         enabled: "true"
-        sslcheck: true
+        sslcheck: false
         contenttype: form
     webhookpolicy: sync
     role: code
@@ -555,7 +338,7 @@ repos:
     issue_tracker: true
     webhooks:
       jenkins-github:
-        url: https://jenkins-forjj.eastus.cloudapp.azure.com/github-webhook/
+        url: http://jenkins-forjj.famille-larsonneur.eu:8083/github-webhook/
         events:
         - pull_request
         - push

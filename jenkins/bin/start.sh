@@ -52,12 +52,12 @@ fi
 
 if [ "$SERVICE_ADDR" = "" ]
 then
-   SERVICE_ADDR="jenkins-forjj.eastus.cloudapp.azure.com"
+   SERVICE_ADDR="jenkins-forjj.famille-larsonneur.eu"
    echo "SERVICE_ADDR not defined by any deployment environment. Set to '$SERVICE_ADDR'"
 fi
 if [ "$SERVICE_PORT" = "" ]
 then
-   SERVICE_PORT=443
+   SERVICE_PORT=8083
    echo "SERVICE_PORT not defined by any deployment environment. Set to '$SERVICE_PORT'"
 fi
 
@@ -84,19 +84,6 @@ fi
 
 JENKINS_MOUNT="-v forj-oss-jenkins-home:/var/jenkins_home -e DOCKER_JENKINS_MOUNT=forj-oss-jenkins-home:/var/jenkins_home"
 
-if [[ "$CERTIFICATE_KEY" = "" ]]
-then
-   echo "Unable to set jenkins certificate without his key. Aborted."
-   exit 1
-fi
-echo "$CERTIFICATE_KEY" > .certificate.key
-unset CERTIFICATE_KEY
-echo "Certificate set."
-
-set -x
-
-JENKINS_OPTS='JENKINS_OPTS=--httpPort=-1 --httpsPort=8443 --httpsCertificate=/tmp/certificate.crt --httpsPrivateKey=/tmp/certificate.key'
-JENKINS_MOUNT="$JENKINS_MOUNT -v ${DEPLOY}certificate.crt:/tmp/certificate.crt -v ${DEPLOY}.certificate.key:/tmp/certificate.key"
 
 if [ "$CONTAINER_IMG" != "" ]
 then
@@ -110,7 +97,8 @@ then
 sleep 30
 docker rm -f forj-oss-jenkins-dood
 sleep 2
-docker run --restart always $DOCKER_DOOD -d -p $SERVICE_PORT:8443 -e \"$JENKINS_OPTS\" $JENKINS_MOUNT --name forj-oss-jenkins-dood $GITHUB_USER $ADMIN $PROXY $TAG_NAME
+
+docker run --restart always $DOCKER_DOOD -d -p $SERVICE_PORT:8080 $JENKINS_MOUNT --name forj-oss-jenkins-dood $GITHUB_USER $ADMIN $PROXY $TAG_NAME
 echo 'Service is restarted'
 sleep 1
 docker rm -f jenkins-restart" > do_restart.sh
@@ -129,7 +117,8 @@ docker rm -f jenkins-restart" > do_restart.sh
 fi
 
 # No container found. Start it.
-docker run --restart always $DOCKER_DOOD -d -p $SERVICE_PORT:8443 -e "$JENKINS_OPTS" $JENKINS_MOUNT --name forj-oss-jenkins-dood $GITHUB_USER $ADMIN $PROXY $TAG_NAME
+
+docker run --restart always $DOCKER_DOOD -d -p $SERVICE_PORT:8080 $JENKINS_MOUNT --name forj-oss-jenkins-dood $GITHUB_USER $ADMIN $PROXY $TAG_NAME
 
 if [ $? -ne 0 ]
 then
@@ -137,4 +126,4 @@ then
     docker logs forj-oss-jenkins-dood
     exit 1
 fi
-echo "Jenkins has been started and should be accessible at https://$SERVICE_ADDR:$SERVICE_PORT"
+echo "Jenkins has been started and should be accessible at http://$SERVICE_ADDR:$SERVICE_PORT"
