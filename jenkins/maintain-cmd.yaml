@@ -10,4 +10,9 @@ environment:
   SIMPLE_ADMIN_PWD:
     value: '{{ .Creds.AdminPwd }}'
     if: '{{ if .Creds.AdminPwd }}true{{ end }}'
-files: {}
+files:
+  jenkins-creds.json:
+    remove-when-done: true
+    content: '{{ index .Creds "app-jenkins-feature-credentials-json" }}'
+    if: "true"
+    create-subdir: false

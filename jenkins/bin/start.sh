@@ -52,7 +52,7 @@ fi
 
 if [ "$SERVICE_ADDR" = "" ]
 then
-   SERVICE_ADDR="jenkins-forjj.famille-larsonneur.eu"
+   SERVICE_ADDR="localhost"
    echo "SERVICE_ADDR not defined by any deployment environment. Set to '$SERVICE_ADDR'"
 fi
 if [ "$SERVICE_PORT" = "" ]
@@ -60,6 +60,8 @@ then
    SERVICE_PORT=8083
    echo "SERVICE_PORT not defined by any deployment environment. Set to '$SERVICE_PORT'"
 fi
+
+export JENKINS_URL="http://localhost:8083"
 
 TAG_NAME=hub.docker.com/$REPO/$IMAGE_NAME:$IMAGE_VERSION
 
@@ -98,7 +100,7 @@ sleep 30
 docker rm -f forj-oss-jenkins-dood
 sleep 2
 
-docker run --restart always $DOCKER_DOOD -d -p $SERVICE_PORT:8080 $JENKINS_MOUNT --name forj-oss-jenkins-dood $GITHUB_USER $ADMIN $PROXY $TAG_NAME
+docker run --restart always $DOCKER_DOOD -d -p $SERVICE_PORT:8080 $JENKINS_MOUNT --name forj-oss-jenkins-dood -e JENKINS_URL $GITHUB_USER $ADMIN $PROXY $TAG_NAME
 echo 'Service is restarted'
 sleep 1
 docker rm -f jenkins-restart" > do_restart.sh
@@ -111,14 +113,14 @@ docker rm -f jenkins-restart" > do_restart.sh
         docker exec jenkins-restart /tmp/do_restart.sh
         set +x
     else
-        echo "Nothing to re/start. Jenkins is still accessible at http://$SERVICE_ADDR:$SERVICE_PORT"
+        echo "Nothing to re/start. Jenkins is still accessible at $JENKINS_URL"
     fi
     exit 0
 fi
 
 # No container found. Start it.
 
-docker run --restart always $DOCKER_DOOD -d -p $SERVICE_PORT:8080 $JENKINS_MOUNT --name forj-oss-jenkins-dood $GITHUB_USER $ADMIN $PROXY $TAG_NAME
+eval docker run --restart always $DOCKER_DOOD -d -p $SERVICE_PORT:8080 $JENKINS_MOUNT --name forj-oss-jenkins-dood -e JENKINS_URL $GITHUB_USER $ADMIN $PROXY $TAG_NAME
 
 if [ $? -ne 0 ]
 then
@@ -126,4 +128,4 @@ then
     docker logs forj-oss-jenkins-dood
     exit 1
 fi
-echo "Jenkins has been started and should be accessible at http://$SERVICE_ADDR:$SERVICE_PORT"
+echo "Jenkins has been started and should be accessible at $JENKINS_URL"
