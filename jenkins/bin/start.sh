@@ -61,7 +61,7 @@ then
    echo "SERVICE_PORT not defined by any deployment environment. Set to '$SERVICE_PORT'"
 fi
 
-export JENKINS_URL="http://localhost:8083"
+export JENKINS_URL="https://jenkins-forjj.famille-larsonneur.eu"
 
 TAG_NAME=hub.docker.com/$REPO/$IMAGE_NAME:$IMAGE_VERSION
 
