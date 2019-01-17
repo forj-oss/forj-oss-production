@@ -94,7 +94,7 @@ then
         # TODO: Find a way to stop it safely - Using safe shutdown?
 
         docker rm -f jenkins-restart
-        docker run -id --name jenkins-restart $DOCKER_DOOD $GITHUB_USER $ADMIN alpine /bin/cat
+        eval docker run -id --name jenkins-restart $DOCKER_DOOD $GITHUB_USER $ADMIN alpine /bin/cat
         echo "#!/bin/sh
 sleep 30
 docker rm -f forj-oss-jenkins-dood

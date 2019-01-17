@@ -50,7 +50,7 @@ plugin:github-api:1.95
 plugin:github-branch-source:2.4.2
 plugin:handlebars:1.1.1
 plugin:handy-uri-templates-2-api:2.1.6-1.0
-plugin:htmlpublisher:1.17
+plugin:htmlpublisher:1.18
 plugin:icon-shim:2.0.3
 plugin:jackson2-api:2.9.8
 plugin:javadoc:1.4
@@ -112,7 +112,7 @@ plugin:workflow-job:2.31
 plugin:workflow-multibranch:2.20
 plugin:workflow-scm-step:2.7
 plugin:workflow-step-api:2.18
-plugin:workflow-support:3.0
+plugin:workflow-support:3.1
 plugin:ws-cleanup:0.37
 plugin:yet-another-docker-plugin:0.1.0-rc28
 groovy:basic-security/basic-security:a4305a40478e777abdeb5fea6b8654b39a8d4d30
