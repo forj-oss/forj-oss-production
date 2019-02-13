@@ -20,6 +20,7 @@ features:
 - feature:credentials
 - feature:csrf
 - plugin:config-file-provider
+- feature:multibranch-github-pipeline
 - plugin:timestamper
 - plugin:mask-passwords
 - plugin:blueocean
@@ -39,7 +40,175 @@ projects:
   dsl-repo: https://github.com/forj-oss/forj-oss-production
   dsl-path: jenkins/jobs-dsl
   dsl-default: true
-  list: {}
+  list:
+    docker-lu:
+      name: docker-lu
+      sourcetype: github
+      github:
+        apiurl: https://api.github.com/
+        repo: docker-lu
+        repoowner: forj-oss
+      role: code
+    forj-oss-infra:
+      name: forj-oss-infra
+      sourcetype: github
+      github:
+        apiurl: https://api.github.com/
+        repo: forj-oss-infra
+        repoowner: forj-oss
+      role: infra
+    forj-oss-production:
+      name: forj-oss-production
+      sourcetype: github
+      github:
+        apiurl: https://api.github.com/
+        repo: forj-oss-production
+        repoowner: forj-oss
+      role: deploy
+    forjj:
+      name: forjj
+      sourcetype: github
+      github:
+        apiurl: https://api.github.com/
+        repo: forjj
+        repoowner: forj-oss
+      role: code
+    forjj-bitbucket:
+      name: forjj-bitbucket
+      sourcetype: github
+      github:
+        apiurl: https://api.github.com/
+        repo: forjj-bitbucket
+        repoowner: forj-oss
+      role: code
+    forjj-contribs:
+      name: forjj-contribs
+      sourcetype: github
+      github:
+        apiurl: https://api.github.com/
+        repo: forjj-contribs
+        repoowner: forj-oss
+      role: code
+    forjj-example:
+      name: forjj-example
+      sourcetype: github
+      github:
+        apiurl: https://api.github.com/
+        repo: forjj-example
+        repoowner: forj-oss
+      role: code
+    forjj-flows:
+      name: forjj-flows
+      sourcetype: github
+      github:
+        apiurl: https://api.github.com/
+        repo: forjj-flows
+        repoowner: forj-oss
+      role: code
+    forjj-github:
+      name: forjj-github
+      sourcetype: github
+      github:
+        apiurl: https://api.github.com/
+        repo: forjj-github
+        repoowner: forj-oss
+      role: code
+    forjj-gitlab:
+      name: forjj-gitlab
+      sourcetype: github
+      github:
+        apiurl: https://api.github.com/
+        repo: forjj-gitlab
+        repoowner: forj-oss
+      role: code
+    forjj-jenkins:
+      name: forjj-jenkins
+      sourcetype: github
+      github:
+        apiurl: https://api.github.com/
+        repo: forjj-jenkins
+        repoowner: forj-oss
+      role: code
+    forjj-modules:
+      name: forjj-modules
+      sourcetype: github
+      github:
+        apiurl: https://api.github.com/
+        repo: forjj-modules
+        repoowner: forj-oss
+      role: code
+    forjj-repotemplates:
+      name: forjj-repotemplates
+      sourcetype: github
+      github:
+        apiurl: https://api.github.com/
+        repo: forjj-repotemplates
+        repoowner: forj-oss
+      role: code
+    github-release:
+      name: github-release
+      sourcetype: github
+      github:
+        apiurl: https://api.github.com/
+        repo: github-release
+        repoowner: forj-oss
+      role: code
+    goforjj:
+      name: goforjj
+      sourcetype: github
+      github:
+        apiurl: https://api.github.com/
+        repo: goforjj
+        repoowner: forj-oss
+      role: code
+    jenkins-ci:
+      name: jenkins-ci
+      sourcetype: github
+      github:
+        apiurl: https://api.github.com/
+        repo: jenkins-ci
+        repoowner: forj-oss
+      role: code
+    jenkins-install-inits:
+      name: jenkins-install-inits
+      sourcetype: github
+      github:
+        apiurl: https://api.github.com/
+        repo: jenkins-install-inits
+        repoowner: forj-oss
+      role: code
+    jenkins-versions-tool:
+      name: jenkins-versions-tool
+      sourcetype: github
+      github:
+        apiurl: https://api.github.com/
+        repo: jenkins-versions-tool
+        repoowner: forj-oss
+      role: code
+    jplugins:
+      name: jplugins
+      sourcetype: github
+      github:
+        apiurl: https://api.github.com/
+        repo: jplugins
+        repoowner: forj-oss
+      role: code
+    simple-docker-module:
+      name: simple-docker-module
+      sourcetype: github
+      github:
+        apiurl: https://api.github.com/
+        repo: simple-docker-module
+        repoowner: forj-oss
+      role: code
+    simple-relmgt:
+      name: simple-relmgt
+      sourcetype: github
+      github:
+        apiurl: https://api.github.com/
+        repo: simple-relmgt
+        repoowner: forj-oss
+      role: code
 github-user:
   name: clarsonneur
 appextent: {}

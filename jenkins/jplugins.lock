@@ -121,6 +121,7 @@ groovy:csrf/csrf:346fb1d9e63b9297129cfd0bd8a3bc7e52a21b76
 groovy:jenkins-init/00_boot:5b0607287536e2295a7e6b2ee266f39f3bee6105
 groovy:jenkins-init/label:6d53072fd540bc9cd7b6b5cb258ad12543050050
 groovy:jenkins-init/nb-executor:4da5b8cb9a822d252a63fcf0a8f62ed6c23e87f5
+groovy:multibranch-github-pipeline/user-password-credentials:07dd62eb421b86b29131d803eeee7329c7a5ce11
 groovy:proxy/proxy:5b0607287536e2295a7e6b2ee266f39f3bee6105
 groovy:seed-job/seed-job:22be29d5e4fe5e6d66dcf5b48481e9a9a022df7d
 groovy:tcp-slave-agent-port/tcp-slave-agent-port:5b0607287536e2295a7e6b2ee266f39f3bee6105
