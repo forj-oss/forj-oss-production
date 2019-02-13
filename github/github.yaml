@@ -8,15 +8,6 @@ repos:
     description: docker-lu is a small GO program to adapt container files, /etc/passwd
       & /etc/group, with docker host local user UID & GID.
     issue_tracker: true
-    webhooks:
-      jenkins-github:
-        url: https://jenkins-forjj.famille-larsonneur.eu/github-webhook/
-        events:
-        - pull_request
-        - push
-        enabled: "true"
-        sslcheck: true
-        contenttype: form
     webhookpolicy: sync
     role: code
     owner: forj-oss
@@ -26,15 +17,6 @@ repos:
     description: Forj DevOps infrastructure repository
     issue_tracker: true
     infra: true
-    webhooks:
-      jenkins-github:
-        url: https://jenkins-forjj.famille-larsonneur.eu/github-webhook/
-        events:
-        - pull_request
-        - push
-        enabled: "true"
-        sslcheck: true
-        contenttype: form
     webhookpolicy: sync
     role: infra
     owner: forj-oss
@@ -43,15 +25,6 @@ repos:
     name: forj-oss-production
     description: Deployment source code for production environment
     issue_tracker: true
-    webhooks:
-      jenkins-github:
-        url: https://jenkins-forjj.famille-larsonneur.eu/github-webhook/
-        events:
-        - pull_request
-        - push
-        enabled: "true"
-        sslcheck: true
-        contenttype: form
     webhookpolicy: sync
     role: deploy
     owner: forj-oss
@@ -60,15 +33,6 @@ repos:
     name: forjj
     description: Build your DevOps environment in minutes - thanks to docker!
     issue_tracker: true
-    webhooks:
-      jenkins-github:
-        url: https://jenkins-forjj.famille-larsonneur.eu/github-webhook/
-        events:
-        - pull_request
-        - push
-        enabled: "true"
-        sslcheck: true
-        contenttype: form
     webhookpolicy: sync
     role: code
     owner: forj-oss
@@ -77,15 +41,6 @@ repos:
     name: forjj-bitbucket
     description: Forjj plugin to manage bitbucket application through bitbucket API
     issue_tracker: true
-    webhooks:
-      jenkins-github:
-        url: https://jenkins-forjj.famille-larsonneur.eu/github-webhook/
-        events:
-        - pull_request
-        - push
-        enabled: "true"
-        sslcheck: true
-        contenttype: form
     webhookpolicy: sync
     role: code
     owner: forj-oss
@@ -94,15 +49,6 @@ repos:
     name: forjj-contribs
     description: Forjj drivers defining core tasks to real application.
     issue_tracker: true
-    webhooks:
-      jenkins-github:
-        url: https://jenkins-forjj.famille-larsonneur.eu/github-webhook/
-        events:
-        - pull_request
-        - push
-        enabled: "true"
-        sslcheck: true
-        contenttype: form
     webhookpolicy: sync
     role: code
     owner: forj-oss
@@ -111,15 +57,6 @@ repos:
     name: forjj-example
     description: Forjj blueprint examples
     issue_tracker: true
-    webhooks:
-      jenkins-github:
-        url: https://jenkins-forjj.famille-larsonneur.eu/github-webhook/
-        events:
-        - pull_request
-        - push
-        enabled: "true"
-        sslcheck: true
-        contenttype: form
     webhookpolicy: sync
     role: code
     owner: forj-oss
@@ -128,15 +65,6 @@ repos:
     name: forjj-flows
     description: Global Forjj flows definition
     issue_tracker: true
-    webhooks:
-      jenkins-github:
-        url: https://jenkins-forjj.famille-larsonneur.eu/github-webhook/
-        events:
-        - pull_request
-        - push
-        enabled: "true"
-        sslcheck: true
-        contenttype: form
     webhookpolicy: sync
     role: code
     owner: forj-oss
@@ -145,15 +73,6 @@ repos:
     name: forjj-github
     description: Forjj plugin to manage github application through github API
     issue_tracker: true
-    webhooks:
-      jenkins-github:
-        url: https://jenkins-forjj.famille-larsonneur.eu/github-webhook/
-        events:
-        - pull_request
-        - push
-        enabled: "true"
-        sslcheck: true
-        contenttype: form
     webhookpolicy: sync
     role: code
     owner: forj-oss
@@ -162,15 +81,6 @@ repos:
     name: forjj-gitlab
     description: Forjj plugin to manage gitlab application through gitlab API
     issue_tracker: true
-    webhooks:
-      jenkins-github:
-        url: https://jenkins-forjj.famille-larsonneur.eu/github-webhook/
-        events:
-        - pull_request
-        - push
-        enabled: "true"
-        sslcheck: true
-        contenttype: form
     webhookpolicy: sync
     role: code
     owner: forj-oss
@@ -179,15 +89,6 @@ repos:
     name: forjj-jenkins
     description: Forjj plugin to manage Jenkins application instanciation via docker
     issue_tracker: true
-    webhooks:
-      jenkins-github:
-        url: https://jenkins-forjj.famille-larsonneur.eu/github-webhook/
-        events:
-        - pull_request
-        - push
-        enabled: "true"
-        sslcheck: true
-        contenttype: form
     webhookpolicy: sync
     role: code
     owner: forj-oss
@@ -197,15 +98,6 @@ repos:
     description: FORJJ Go module to manage forjj cli and data to send out to FORJJ
       plugins
     issue_tracker: true
-    webhooks:
-      jenkins-github:
-        url: https://jenkins-forjj.famille-larsonneur.eu/github-webhook/
-        events:
-        - pull_request
-        - push
-        enabled: "true"
-        sslcheck: true
-        contenttype: form
     webhookpolicy: sync
     role: code
     owner: forj-oss
@@ -215,15 +107,6 @@ repos:
     description: Global shared Repository templates to build a predefined repo structure
       in minutes.
     issue_tracker: true
-    webhooks:
-      jenkins-github:
-        url: https://jenkins-forjj.famille-larsonneur.eu/github-webhook/
-        events:
-        - pull_request
-        - push
-        enabled: "true"
-        sslcheck: true
-        contenttype: form
     webhookpolicy: sync
     role: code
     owner: forj-oss
@@ -232,15 +115,6 @@ repos:
     name: github-release
     description: Manage github release with a simple basic command line.
     issue_tracker: true
-    webhooks:
-      jenkins-github:
-        url: https://jenkins-forjj.famille-larsonneur.eu/github-webhook/
-        events:
-        - pull_request
-        - push
-        enabled: "true"
-        sslcheck: true
-        contenttype: form
     webhookpolicy: sync
     role: code
     owner: forj-oss
@@ -249,15 +123,6 @@ repos:
     name: goforjj
     description: A go module to facilitate building a FORJJ plugin
     issue_tracker: true
-    webhooks:
-      jenkins-github:
-        url: https://jenkins-forjj.famille-larsonneur.eu/github-webhook/
-        events:
-        - pull_request
-        - push
-        enabled: "true"
-        sslcheck: true
-        contenttype: form
     webhookpolicy: sync
     role: code
     owner: forj-oss
@@ -266,15 +131,6 @@ repos:
     name: jenkins-ci
     description: Jenkins docker image built for forjj
     issue_tracker: true
-    webhooks:
-      jenkins-github:
-        url: https://jenkins-forjj.famille-larsonneur.eu/github-webhook/
-        events:
-        - pull_request
-        - push
-        enabled: "true"
-        sslcheck: true
-        contenttype: form
     webhookpolicy: sync
     role: code
     owner: forj-oss
@@ -284,15 +140,6 @@ repos:
     description: Part of DevOps - Make your Jenkins as Code a Reality!!! Repository
       of Jenkins features(groovy/plugins/shell script) to install/maintain.
     issue_tracker: true
-    webhooks:
-      jenkins-github:
-        url: https://jenkins-forjj.famille-larsonneur.eu/github-webhook/
-        events:
-        - pull_request
-        - push
-        enabled: "true"
-        sslcheck: true
-        contenttype: form
     webhookpolicy: sync
     role: code
     owner: forj-oss
@@ -302,15 +149,6 @@ repos:
     description: Simple tool to manage list of plugins in docker images (jenkins master
       as container)
     issue_tracker: true
-    webhooks:
-      jenkins-github:
-        url: https://jenkins-forjj.famille-larsonneur.eu/github-webhook/
-        events:
-        - pull_request
-        - push
-        enabled: "true"
-        sslcheck: true
-        contenttype: form
     webhookpolicy: sync
     role: code
     owner: forj-oss
@@ -319,15 +157,6 @@ repos:
     name: jplugins
     description: Jenkins plugins managed from code
     issue_tracker: true
-    webhooks:
-      jenkins-github:
-        url: https://jenkins-forjj.famille-larsonneur.eu/github-webhook/
-        events:
-        - pull_request
-        - push
-        enabled: "true"
-        sslcheck: true
-        contenttype: form
     webhookpolicy: sync
     role: code
     owner: forj-oss
@@ -336,15 +165,14 @@ repos:
     name: simple-docker-module
     description: a simple basic GO wrapper to docker cli or docker moby/moby
     issue_tracker: true
-    webhooks:
-      jenkins-github:
-        url: https://jenkins-forjj.famille-larsonneur.eu/github-webhook/
-        events:
-        - pull_request
-        - push
-        enabled: "true"
-        sslcheck: true
-        contenttype: form
+    webhookpolicy: sync
+    role: code
+    owner: forj-oss
+    isdeployable: true
+  simple-relmgt:
+    name: simple-relmgt
+    description: Simple release process management tool
+    issue_tracker: true
     webhookpolicy: sync
     role: code
     owner: forj-oss

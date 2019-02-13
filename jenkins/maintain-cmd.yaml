@@ -1,4 +1,5 @@
 run: bin/start.sh
+description: ""
 environment:
   CERTIFICATE_KEY:
     value: '{{ .Creds.SslPrivateKey }}'
